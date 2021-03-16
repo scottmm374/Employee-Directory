@@ -1,9 +1,11 @@
 // import { isReturnStatement } from "typescript"
 
-import {GET_ALL_SUCCESS, GET_ALL_PENDING, GET_ALL_ERROR} from './actions'
+import {GET_ALL_SUCCESS, GET_ALL_PENDING, GET_ALL_ERROR,ADD_NEW_PENDING,ADD_NEW_SUCCESS,ADD_NEW_ERROR } from './actions'
 
 const initialState = {
     isLoading: false,
+    isAddingEmployee:false,
+    didAddEmployee: false,
     error: '',
     employees: []
 }
@@ -26,6 +28,29 @@ const initialState = {
             
         }
         case GET_ALL_ERROR: {
+            return {
+                ...state,
+                isLoading: false,
+                error: action.payload
+            }
+        }
+        case ADD_NEW_PENDING: {
+            return {
+                ...state,
+                isAddingEmployee: true,
+                // employees: [...state.employees, action.payload],
+                // error: ' '
+            }
+        }
+        case ADD_NEW_SUCCESS: {
+            return {
+                ...state,
+                employees: [...state.employees, action.payload],
+                didAddEmployee: true
+            }
+            
+        }
+        case ADD_NEW_ERROR: {
             return {
                 ...state,
                 isLoading: false,

@@ -43,8 +43,8 @@ function EmployeeList(props) {
 function mapStateToProps(state) {
     console.log("State", state)
     return {
-        employees: state.employees.slice(0, 30
-            )
+        employees: state.employees.slice(60, 100)
+            
     }
 }
 
