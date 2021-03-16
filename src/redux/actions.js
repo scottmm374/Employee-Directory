@@ -13,9 +13,9 @@ export const GET_ALL_ERROR = 'GET_ALL_ERROR';
 // export const ADD_NEW_ERROR = 'ADD_NEW_ERROR';
 
 
-export function getAllEmployees(){
-    return dispatch => {
-        dispatch({type: GET_ALL_PENDING})
+export const getAllEmployees = () => 
+    dispatch => {
+        dispatch({type: GET_ALL_PENDING});
 
         axios
         .get('https://codechallenge.rivet.work/api/v1/profiles', {
@@ -24,10 +24,11 @@ export function getAllEmployees(){
             }
         })
         .then(res => {
+            console.log("res in action", res.data)
             dispatch({ type: GET_ALL_SUCCESS, payload: res.data})
         })
         .catch(err => {
             dispatch({ type: GET_ALL_ERROR, payload: err})
         })
     }
-}
+
