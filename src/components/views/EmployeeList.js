@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from 'react'
+import {Link} from 'react-router-dom'
 import {getAllEmployees} from '../../redux/actions'
 import {connect} from 'react-redux'
 
@@ -16,6 +17,7 @@ function EmployeeList(props) {
         <div>
         <div className='card-container'>
          {props.employees.map(employee => (
+            //  <Link to={`/employee/${employee.id}`}>
                     <div className='card' key={employee.id}>
                         
                         <h4>{employee.first_name}  {employee.last_name}</h4>
@@ -23,6 +25,7 @@ function EmployeeList(props) {
                        
                         
                     </div>
+                    // </Link>
                 ))}
 
                

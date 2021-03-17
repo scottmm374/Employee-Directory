@@ -37,7 +37,7 @@ export const getAllEmployees = () =>
         dispatch({type: GET_EMPLOYEE_PENDING});
 
         axios
-        .get(`https://codechallenge.rivet.work/api/v1/profile/${id}` , {
+        .get('https://codechallenge.rivet.work/api/v1/profile/98' , {
             headers: {
                 'token': 'XA8K6b8GSM5mGNN2v5Q3j6xUUwpkoPSx3zdxbAADwtzuHrexRHWi58rHZkRZJhf7'
             }
