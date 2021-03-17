@@ -38,8 +38,7 @@ const initialState = {
             return {
                 ...state,
                 isAddingEmployee: true,
-                // employees: [...state.employees, action.payload],
-                // error: ' '
+                
             }
         }
         case ADD_NEW_SUCCESS: {

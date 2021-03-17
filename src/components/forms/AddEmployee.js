@@ -25,7 +25,7 @@ function AddEmployee(props){
     }
 
     const handleSubmit = (event) => {
-        event.preventDefault()
+        // event.preventDefault()
         props.addEmployee(newEmployee)
         // event.preventDefault();
         // axios
