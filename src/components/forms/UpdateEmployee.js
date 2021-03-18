@@ -6,11 +6,7 @@ import {connect} from 'react-redux'
 function UpdateEmployee(props){
     console.log(props, "props in update")
     const [updateEmployee, setUpdateEmployee] = useState(props.currentEmployee)
-    useEffect(() => {
-        props.getEmpById(98)
-
-    }, [])
-
+   
 
     const handleChange = event => {
         event.preventDefault()
@@ -18,8 +14,8 @@ function UpdateEmployee(props){
     }
 
     const handleSubmit = (event) => {
-        // event.preventDefault()
-        props.update(98, updateEmployee)
+        event.preventDefault()
+        props.update(props.currentEmployee.id, updateEmployee)
         
         // setNewEmployee({
         // first_name: "",
@@ -108,7 +104,7 @@ function UpdateEmployee(props){
 
 function mapStateToProps(state) {
     return {
-        error: state.error ,
+        error: state.error,
         currentEmployee: state.currentEmployee   
     }
 }

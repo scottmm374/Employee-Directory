@@ -29,7 +29,7 @@ function EmployeeCard(props) {
                     
                 ))}
                 
-                <Route path={`/employee/${path}`}><ProfilePage/></Route>
+               
         </div>
         
        </>

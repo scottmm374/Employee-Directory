@@ -1,6 +1,5 @@
 import React, { useEffect} from 'react'
 // import axios from 'axios'
-import {useParams, useRouteMatch, Route} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {getEmpById} from '../../redux/actions'
 import UpdateEmployee from '../forms/UpdateEmployee'
@@ -30,7 +29,7 @@ const ProfilePage = (props) => {
             <p>Notes: {props.employee.notes}</p>
             <button>Edit Profile</button>
         </div>
-        {/* <UpdateEmployee  /> */}
+        <UpdateEmployee {...props}/>
         </div>
     )
 

@@ -83,7 +83,7 @@ export function update (id, employee) {
         dispatch({type: UPDATE_PENDING});
 
         axios
-        .put('https://codechallenge.rivet.work/api/v1/profile/98', employee, {
+        .put(`https://codechallenge.rivet.work/api/v1/profile/${id}`, employee, {
             headers: {
                 'token': 'XA8K6b8GSM5mGNN2v5Q3j6xUUwpkoPSx3zdxbAADwtzuHrexRHWi58rHZkRZJhf7'
             }
