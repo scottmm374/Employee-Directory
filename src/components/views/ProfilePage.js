@@ -3,6 +3,7 @@ import React, { useEffect} from 'react'
 import {connect} from 'react-redux'
 import {getEmpById} from '../../redux/actions'
 import UpdateEmployee from '../forms/UpdateEmployee'
+import {Link} from 'react-router-dom'
 
 const ProfilePage = (props) => {
     const {id} = props.match.params
@@ -21,15 +22,17 @@ const ProfilePage = (props) => {
     return (
         <div>
         <div>
+            <p>{props.employee.photo}</p>
             <h1>{props.employee.first_name} {props.employee.last_name}</h1>
             <p>Phone :{props.employee.phone}</p>
             <p>Email: {props.employee.email}</p>
             <p>Street:{props.employee.address}</p>
             <p>City:{props.employee.city} State: {props.employee.state}</p>
             <p>Notes: {props.employee.notes}</p>
-            <button>Edit Profile</button>
+            <Link to="/update_employee"><button>Edit Profile</button></Link>
         </div>
-        <UpdateEmployee {...props}/>
+        {/* <UpdateEmployee {...props}/> */}
+        
         </div>
     )
 

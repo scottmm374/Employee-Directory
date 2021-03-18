@@ -1,11 +1,15 @@
 import React, {useState, useEffect} from 'react'
 import {update, getEmpById} from '../../redux/actions'
+import {useHistory} from 'react-router-dom'
 import {connect} from 'react-redux'
+
+
 
 
 function UpdateEmployee(props){
     console.log(props, "props in update")
     const [updateEmployee, setUpdateEmployee] = useState(props.currentEmployee)
+    const history = useHistory()
    
 
     const handleChange = event => {
@@ -16,18 +20,7 @@ function UpdateEmployee(props){
     const handleSubmit = (event) => {
         event.preventDefault()
         props.update(props.currentEmployee.id, updateEmployee)
-        
-        // setNewEmployee({
-        // first_name: "",
-        // last_name: "",
-        // phone: "",
-        // email: "",
-        // address: "",
-        // city: "",
-        // state: "",
-        // zip: "",
-        // photo: "",
-        // notes: ""})
+        history.push('/employee/updateEmployee.id')
     }
     
 
