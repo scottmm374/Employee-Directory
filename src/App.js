@@ -1,23 +1,24 @@
 import React from 'react';
 import './App.css';
-// import {Route, Switch} from 'react-router-dom'
-import EmployeeList from './components/views/EmployeeList'
+import {Route, Switch} from 'react-router-dom'
+import EmployeeDashboard from './components/views/EmployeeCard'
 import AddEmployee from './components/forms/AddEmployee'
+import UpdateEmployee from './components/forms/UpdateEmployee'
 import ProfilePage from './components/views/ProfilePage';
+// import ProfilePage from './components/views/ProfilePage';
 
 function App() {
   return (
     <div className="App">
-      {/* <Switch>
-        <Route exact path='/' component={EmployeeList} />
-        <Route path='/employee/:id' component={ProfilePage} />
-        <Route path='/add-employee-form' component={AddEmployee} />
-      </Switch> */}
-
-
-       {/* <EmployeeList /> */}
-      <ProfilePage />
-       {/* <AddEmployee /> */}
+      <Switch>
+    <Route exact path='/' component={EmployeeDashboard}/ >
+    <Route path='/employee/:id' component={ProfilePage}/ >
+    <Route path='/add_employee' component={AddEmployee}/ >
+    <Route path='/update_employee' component={UpdateEmployee}/ >
+   
+      
+    </Switch> 
+       
     </div>
   );
 }

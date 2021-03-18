@@ -1,19 +1,24 @@
 import React, { useEffect} from 'react'
 // import axios from 'axios'
-// import {useParams} from 'react-router-dom'
+import {useParams, useRouteMatch, Route} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {getEmpById} from '../../redux/actions'
 import UpdateEmployee from '../forms/UpdateEmployee'
 
 const ProfilePage = (props) => {
+    const {id} = props.match.params
     // const params = useParams()
+    // console.log("profile page", props, params)
     
-    useEffect(() => {
-        props.getEmpById()
-       
-    }, [])
-    
+    // const currEmployee = props.find(emp => emp.id === Number(params));
+    // console.log(currEmployee)
 
+    useEffect(() => {
+        props.getEmpById(id)
+      
+    },[])
+    
+    
     return (
         <div>
         <div>
@@ -23,11 +28,12 @@ const ProfilePage = (props) => {
             <p>Street:{props.employee.address}</p>
             <p>City:{props.employee.city} State: {props.employee.state}</p>
             <p>Notes: {props.employee.notes}</p>
-
+            <button>Edit Profile</button>
         </div>
-        <UpdateEmployee props={props} id={props.employee.id} />
+        {/* <UpdateEmployee  /> */}
         </div>
     )
+
 }
 
 function mapStateToProps(state) {
@@ -37,5 +43,5 @@ function mapStateToProps(state) {
             
     }
 }
-
+// export default ProfilePage;
 export default connect(mapStateToProps, {getEmpById})(ProfilePage);

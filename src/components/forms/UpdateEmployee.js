@@ -1,22 +1,16 @@
 import React, {useState, useEffect} from 'react'
-import {update} from '../../redux/actions'
+import {update, getEmpById} from '../../redux/actions'
 import {connect} from 'react-redux'
 
 
-function UpdateEmployee({first_name, last_name, phone, email, address, city,  zip, state, photo, notes}){
-    const [updateEmployee, setUpdateEmployee] = useState({
-        first_name: {first_name},
-        last_name: {last_name},
-        phone: {phone},
-        email: {email},
-        address: {address},
-        city: {city},
-        state: {state},
-        zip: {zip},
-        photo: {photo},
-        notes: {notes},
+function UpdateEmployee(props){
+    console.log(props, "props in update")
+    const [updateEmployee, setUpdateEmployee] = useState(props.currentEmployee)
+    useEffect(() => {
+        props.getEmpById(98)
 
-    })
+    }, [])
+
 
     const handleChange = event => {
         event.preventDefault()
@@ -25,7 +19,7 @@ function UpdateEmployee({first_name, last_name, phone, email, address, city,  zi
 
     const handleSubmit = (event) => {
         // event.preventDefault()
-        props.update(updateEmployee)
+        props.update(98, updateEmployee)
         
         // setNewEmployee({
         // first_name: "",
@@ -114,9 +108,10 @@ function UpdateEmployee({first_name, last_name, phone, email, address, city,  zi
 
 function mapStateToProps(state) {
     return {
-        error: state.error     
+        error: state.error ,
+        currentEmployee: state.currentEmployee   
     }
 }
 
-export default connect(mapStateToProps, {addEmployee})(UpdateEmployee);
+export default connect(mapStateToProps, {update, getEmpById})(UpdateEmployee);
 // export default AddEmployee

@@ -16,23 +16,28 @@
 .App-link {
   color: #61dafb;
 }
+.header {
+  width: 100%;
+  color: orange;
+  height: 10%;
+}
 
 .card-container {
-  width:90%;
-  margin-right:2rem;
-  margin-left:2rem;
+  width: 90%;
+  margin-right: 2rem;
+  margin-left: 2rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 }
 
-.card{
+.card {
   background-color: antiquewhite;
-   border: 0;
-   /* box-shadow: 0 4px 8px 3px ${colors.subtle}; */
-   color: navy;
-   cursor: pointer;
-   padding: 1rem;
-   margin: 1rem auto;
-   width: 20%;
+  border: 0;
+  /* box-shadow: 0 4px 8px 3px ${colors.subtle}; */
+  color: navy;
+  cursor: pointer;
+  padding: 1rem;
+  margin: 1rem auto;
+  width: 20%;
 }
