@@ -1,8 +1,9 @@
-import axios from 'axios'
-import React, {useState, useEffect} from 'react'
+import {useState} from 'react'
+import {addEmployee} from '../../redux/actions'
+import {connect} from 'react-redux'
 
 
-function AddEmployee(){
+function AddEmployee(props){
     const [newEmployee, setNewEmployee] = useState({
         first_name: "",
         last_name: "",
@@ -18,23 +19,14 @@ function AddEmployee(){
     })
 
     const handleChange = event => {
+        event.preventDefault()
         setNewEmployee({...newEmployee, [event.target.name]: event.target.value})
     }
 
-    const handleSubmit = event => {
-        event.preventDefault();
-        axios
-        .post('https://codechallenge.rivet.work/api/v1/profile', newEmployee, {
-            headers: {
-                'token': 'XA8K6b8GSM5mGNN2v5Q3j6xUUwpkoPSx3zdxbAADwtzuHrexRHWi58rHZkRZJhf7'
-            }
-        })
-        .then(res => {
-            console.log(res.data)
-        })
-        .catch(err => {
-            console.log("error", err)
-        })
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        props.addEmployee(newEmployee)
+        
         setNewEmployee({
         first_name: "",
         last_name: "",
@@ -120,4 +112,10 @@ function AddEmployee(){
     )
 }
 
-export default AddEmployee
+function mapStateToProps(state) {
+    return {
+        error: state.error     
+    }
+}
+
+export default connect(mapStateToProps, {addEmployee})(AddEmployee);
