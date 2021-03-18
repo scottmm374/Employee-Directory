@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import {useState} from 'react'
 import {update, getEmpById} from '../../redux/actions'
 import {useHistory} from 'react-router-dom'
 import {connect} from 'react-redux'
@@ -103,4 +103,3 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, {update, getEmpById})(UpdateEmployee);
-// export default AddEmployee

@@ -5,7 +5,6 @@ import EmployeeDashboard from './components/views/EmployeeCard'
 import AddEmployee from './components/forms/AddEmployee'
 import UpdateEmployee from './components/forms/UpdateEmployee'
 import ProfilePage from './components/views/ProfilePage';
-// import ProfilePage from './components/views/ProfilePage';
 
 function App() {
   return (
