@@ -1,46 +1,70 @@
-# Getting Started with Create React App
+Skills
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    Proficient with Javascript, Typescript, React and application state management
+    Understanding of how to consume RESTful APIs
+    Working knowledge of UI/UX best practices to create an intuitive, usable interface
+    Proficiency with CSS to style application
 
-## Available Scripts
+Requirements
 
-In the project directory, you can run:
+Rivet has developed a RESTful API for it's employee directory. You will create a simple, usable, single page React application to view, add and update employees in this directory. The API requires an access token which you will be provided by email.
 
-### `npm start`
+### Your solution should satisfy the following requirements:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [x] Allow all employee profiles to be viewed on a single screen
+- [x] Allow a single employee profile to be viewed
+- [x] Allow a new employee profile to be created
+- [x] Allow an existing employee profile to be updated
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Endpoints
 
-### `npm test`
+The following endpoints have been provided to complete your task:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Get all employee profiles:**
 
-### `npm run build`
+    GET https://codechallenge.rivet.work/api/v1/profiles
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Get single employee profile:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    GET https://codechallenge.rivet.work/api/v1/profile/{id}
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Create new employee profile:**
 
-### `npm run eject`
+    POST https://codechallenge.rivet.work/api/v1/profile
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Update existing employee profile:**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    PUT https://codechallenge.rivet.work/api/v1/profile/{id}
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Profile Data Structure
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Profiles have the following JSON data structure:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+{
+    "first_name": "string / 255 char max / required",
+    "last_name": "string / 255 char max / required",
+    "phone": "string / 255 char max / required",
+    "email": "string / 255 char max / required",
+    "address": "string / 255 char max / required",
+    "city": "string / 255 char max / required",
+    "state": "string / 255 char max / required",
+    "zip": "string / 255 char max / required",
+    "photo": "string / 255 char max / URL to image file",
+    "notes": "string / 4GB max"
+}
+
+
+## Deliverable MVP
+
+You will use React to create a single page application (SPA). Once complete, email a link to a public git repo or zipped version of your application (Dropbox, Google Drive, OneDrive, etc) and provide instructions on how to build and run your solution to Andy Lawrence at andy@rivet.work.
+## Considerations Stretch
+
+    Your solution should make use of ES6 Javascript techniques such as promises, classes and arrow functions (where appropriate).
+    Bonus points for using Redux Toolkit for state management
+    Readable code will be favored over clever, confusing code.
+    The optional image field only takes a URL string. If you want to add a profile image, you will need to figure out how to host it yourself.
+    Get creative! Engaging micro-interactions, animations and bold design choices are encouraged.
+
+Happy Coding 🤓
