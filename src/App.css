@@ -117,7 +117,9 @@
   color: #03e9f4;
   font-size: 12px;
 }
-.employee_form form a {
+.employee_form form button {
+  background-color: #032032;
+  border: #032032 1px;
   position: relative;
   display: inline-block;
   padding: 10px 20px;
@@ -131,19 +133,19 @@
   letter-spacing: 4px;
 }
 
-.employee_form a:hover {
+.employee_form button:hover {
   background: #f9a54b;
   color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 5px #f9a54b, 0 0 25px #f9a54b, 0 0 50px #f9a54b, 0 0 100px #f9a54b;
 }
 
-.employee_form a span {
+.employee_form button span {
   position: absolute;
   display: block;
 }
 
-.employee_form a span:nth-child(1) {
+.employee_form button span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -162,7 +164,7 @@
   }
 }
 
-.employee_form a span:nth-child(2) {
+.employee_form button span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -182,7 +184,7 @@
   }
 }
 
-.employee_form a span:nth-child(3) {
+.employee_form button span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -202,7 +204,7 @@
   }
 }
 
-.employee_form a span:nth-child(4) {
+.employee_form button span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;

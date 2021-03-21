@@ -35,7 +35,7 @@ function UpdateEmployee(props){
            type='text'
            name='first_name'
            value={updateEmployee.first_name}
-           
+           required='First Name Required'
            onChange={handleChange} />
            </div>
            <div className= "form-input">
@@ -111,7 +111,7 @@ function UpdateEmployee(props){
            onChange={handleChange} />
            </div>
            
-           <a href="#">
+           <button>
            <span></span>
            <span></span>
            <span></span>
@@ -119,7 +119,7 @@ function UpdateEmployee(props){
            {/* <button> */}
                Update
                {/* </button> */}
-           </a>
+           </button>
         </form>
 
     </div>
