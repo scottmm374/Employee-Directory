@@ -1,29 +1,27 @@
 .App {
   text-align: center;
+  background-color: #173b6b;
 }
-
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
 
 .App-link {
   color: #61dafb;
 }
 .header {
   width: 100%;
+  background-color: #173b6b;
+  /* color: orange; */
+  height: 30%;
+}
+
+.header h1 {
+  font-family: "roboto";
+  font-size: 2rem;
   color: orange;
-  height: 10%;
 }
 
 .card-container {
-  width: 90%;
+  background-color: #173b6b;
+  width: 80%;
   margin-right: 2rem;
   margin-left: 2rem;
   display: flex;
@@ -31,13 +29,197 @@
   justify-content: space-between;
 }
 
+/* .dashboard {
+  display: flex;
+  text-align: center;
+} */
+
+.card-img {
+  width: 80%;
+  height: auto;
+  border-radius: ;
+}
+
 .card {
-  background-color: antiquewhite;
+  background-image: url("./assets/tang-bkgd.png");
   border: 0;
-  /* box-shadow: 0 4px 8px 3px ${colors.subtle}; */
-  color: navy;
+  color: #002345;
   cursor: pointer;
   padding: 1rem;
   margin: 1rem auto;
   width: 20%;
+  height: auto;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.name-card {
+  padding-top: 1rem;
+  font-size: 2rem;
+  font-family: "roboto";
+  color: #173b6b;
+}
+
+.form-container {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.employee_form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: #032032;
+
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.employee_form h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #f9a54b;
+  text-align: center;
+}
+.form-input {
+  position: relative;
+}
+
+.employee_form .form-input input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #f9a54b;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #f9a54b;
+  outline: none;
+  background: transparent;
+}
+.employee_form .form-input label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #f9a54b;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.employee_form .form-input input:focus ~ label,
+.employee_form .form-input input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+.employee_form form button {
+  background-color: #032032;
+  border: #032032 1px;
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #f9a54b;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+}
+
+.employee_form button:hover {
+  background: #f9a54b;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #f9a54b, 0 0 25px #f9a54b, 0 0 50px #f9a54b, 0 0 100px #f9a54b;
+}
+
+.employee_form button span {
+  position: absolute;
+  display: block;
+}
+
+.employee_form button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #cbe006);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.employee_form button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #f9a54b);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.employee_form button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #f9a54b);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.employee_form button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #f9a54b);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
 }

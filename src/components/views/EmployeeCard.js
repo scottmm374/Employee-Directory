@@ -16,9 +16,11 @@ function EmployeeCard(props) {
         <div className='card-container'>
          {props.employees.map(employee => (
                     <div className='card' key={employee.id}>
-                        <h4>{employee.first_name}  {employee.last_name}</h4>
-                        <p>{employee.phone} {employee.email}</p>
-                        <Link to={`/employee/${employee.id}`}><button>View</button></Link>
+
+                        <img className="card-img" src={`${employee.photo}`} alt={employee.first_name}/>
+                        <h4 className="name-card">{employee.first_name}  {employee.last_name}</h4>
+                        <p className="icons-card">{employee.phone} {employee.email}</p>
+                        <Link to={`/employee/${employee.id}`}><button className="view-profile-button">View</button></Link>
                     </div>
                 ))}
         </div>
