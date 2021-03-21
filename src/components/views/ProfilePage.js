@@ -15,7 +15,7 @@ const ProfilePage = (props) => {
 
     return (
         <div>
-            <p>{props.employee.photo}</p>
+            <img src={`${props.employee.photo}`} alt={props.employee.first_name}/>
             <h1>{props.employee.first_name} {props.employee.last_name}</h1>
             <p>Phone :{props.employee.phone}</p>
             <p>Email: {props.employee.email}</p>

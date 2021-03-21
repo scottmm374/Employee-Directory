@@ -5,11 +5,14 @@ import EmployeeDashboard from './components/views/EmployeeCard'
 import AddEmployee from './components/forms/AddEmployee'
 import UpdateEmployee from './components/forms/UpdateEmployee'
 import ProfilePage from './components/views/ProfilePage';
+import Header from './ui_elements/Header'
 
 function App() {
   return (
     <div className="App">
-      <div><Link to='/add-employee'><button>Add New Employee</button></Link></div>
+      <div>
+        <Header />
+      </div>
       <Switch>
     <Route exact path='/' component={EmployeeDashboard}/ >
     <Route path='/employee/:id' component={ProfilePage}/ >

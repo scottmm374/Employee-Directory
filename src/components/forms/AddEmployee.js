@@ -42,8 +42,11 @@ function AddEmployee(props){
     
 
     return (
-    <div className='add_employee_form'>
+        <div className="form-container">
+    <div className='employee_form'>
+        <h2>Add New Employee</h2>
         <form onSubmit={handleSubmit}>
+            <div className= "form-input">
             <label>First Name</label>
            <input
            type='text'
@@ -51,63 +54,92 @@ function AddEmployee(props){
            value={newEmployee.first_name}
            
            onChange={handleChange} />
+           </div>
+           <div className= "form-input">
            <label>Last Name</label>
            <input
            type='text'
            name='last_name'
            value={newEmployee.last_name}
            onChange={handleChange} />
+           </div>
+           <div className= "form-input">
            <label>Phone Number</label>
            <input
            type='text'
            name='phone'
            value={newEmployee.phone}
            onChange={handleChange} />
+           </div>
+           <div className= "form-input">
            <label>Email</label>
            <input
            type='text'
            name='email'
            value={newEmployee.email}
            onChange={handleChange} />
+           </div>
+           <div className= "form-input">
            <label>Address</label>
            <input
            type='text'
            name='address'
            value={newEmployee.address}
            onChange={handleChange} />
+           </div>
+           <div className= "form-input">
            <label>City</label>
            <input
            type='text'
            name='city'
            value={newEmployee.city}
            onChange={handleChange} />
+           </div>
+           <div className= "form-input">
            <label>State</label>
            <input
            type='text'
            name='state'
            value={newEmployee.state}
            onChange={handleChange} />
+           </div>
+           <div className= "form-input">
            <label>Zip Code</label>
            <input
            type='text'
            name='zip'
            value={newEmployee.zip}
            onChange={handleChange} />
+           </div>
+           <div className= "form-input">
            <label>Photo URL</label>
            <input
            type='text'
            name='photo'
            value={newEmployee.photo}
            onChange={handleChange} />
+           </div>
+           <div className= "form-input">
            <label>Notes</label>
            <textarea
            type='text'
            name='notes'
            value={newEmployee.notes}
            onChange={handleChange} />
-           <button>Add Employee</button>
+           </div>
+           
+           <a href="#">
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+           {/* <button> */}
+               Add Employee
+               {/* </button> */}
+           </a>
         </form>
 
+    </div>
     </div>
     )
 }
