@@ -20,14 +20,6 @@
   color: #f05237;
 }
 
-/* .header button {
-  background-color: #df9c10;
-  color: #561f46;
-  border: #561f46 2px solid;
-  border-radius: 10px;
-  height: 3rem;
-} */
-
 .header button {
   background: #032032;
   width: 10rem;
@@ -121,7 +113,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 400px;
+  /* width: 400px; */
+  width: 80%;
 
   padding: 40px;
   transform: translate(-50%, -50%);
@@ -135,7 +128,7 @@
 .employee_form h2 {
   margin: 0 0 30px;
   padding: 0;
-  color: #f9a54b;
+  color: #f05237;
   text-align: center;
 }
 .form-input {
@@ -146,10 +139,10 @@
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
-  color: #f9a54b;
+  color: #f05237;
   margin-bottom: 30px;
   border: none;
-  border-bottom: 1px solid #f9a54b;
+  border-bottom: 1px solid #f05237;
   outline: none;
   background: transparent;
 }
@@ -159,7 +152,7 @@
   left: 0;
   padding: 10px 0;
   font-size: 16px;
-  color: #f9a54b;
+  color: #f05237;
   pointer-events: none;
   transition: 0.5s;
 }
@@ -177,7 +170,7 @@
   position: relative;
   display: inline-block;
   padding: 10px 20px;
-  color: #f9a54b;
+  color: #f05237;
   font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
@@ -191,7 +184,7 @@
   background: #f9a54b;
   color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 5px #f9a54b, 0 0 25px #f9a54b, 0 0 50px #f9a54b, 0 0 100px #f9a54b;
+  box-shadow: 0 0 5px #f05237, 0 0 25px #f05237, 0 0 50px #f05237, 0 0 100px #f05237;
 }
 
 .employee_form button span {
@@ -204,7 +197,7 @@
   left: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #cbe006);
+  background: linear-gradient(90deg, transparent, #f05237);
   animation: btn-anim1 1s linear infinite;
 }
 
@@ -223,7 +216,7 @@
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(180deg, transparent, #f9a54b);
+  background: linear-gradient(180deg, transparent, #f05237);
   animation: btn-anim2 1s linear infinite;
   animation-delay: 0.25s;
 }
@@ -243,7 +236,7 @@
   right: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg, transparent, #f9a54b);
+  background: linear-gradient(270deg, transparent, #f05237);
   animation: btn-anim3 1s linear infinite;
   animation-delay: 0.5s;
 }
@@ -263,7 +256,7 @@
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(360deg, transparent, #f9a54b);
+  background: linear-gradient(360deg, transparent, #f05237);
   animation: btn-anim4 1s linear infinite;
   animation-delay: 0.75s;
 }
@@ -276,4 +269,11 @@
   100% {
     bottom: 100%;
   }
+}
+
+.profile-page {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(240, 82, 55);
 }

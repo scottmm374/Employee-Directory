@@ -26,6 +26,7 @@ function AddEmployee(props: any){
     const handleSubmit = (event: any) => {
         event.preventDefault()
         props.addEmployee(newEmployee)
+        props.history.push('/')
         
         setNewEmployee({
         first_name: "",
@@ -142,9 +143,7 @@ function AddEmployee(props: any){
            <span></span>
            <span></span>
            <span></span>
-           {/* <button> */}
                Add Employee
-               {/* </button> */}
            </button>
         </form>
 

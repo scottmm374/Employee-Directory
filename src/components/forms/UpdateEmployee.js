@@ -116,9 +116,7 @@ function UpdateEmployee(props){
            <span></span>
            <span></span>
            <span></span>
-           {/* <button> */}
                Update
-               {/* </button> */}
            </button>
         </form>
 
