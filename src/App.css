@@ -1,10 +1,27 @@
 .App {
   text-align: center;
+  font-family: "Roboto", sans-serif;
   /* background-color: #173b6b; */
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.sideways {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  margin-top: 2rem;
+  font-family: Roboto;
+  /* font-style: thin; */
+  font-weight: 100;
+  font-size: 75px;
+  line-height: 112px;
+  text-align: start;
+  letter-spacing: 1.45em;
+  color: #f8ab48;
+  text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+  /* transform: rotate(90deg); */
 }
 .header {
   width: 100%;
@@ -12,19 +29,22 @@
   height: 40%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .header h1 {
   font-family: "roboto";
+  font-weight: 300;
   font-size: 5rem;
+  letter-spacing: 0.29em;
   color: #f05237;
 }
 
 .header button {
   background: #032032;
-  width: 10rem;
-  height: 5rem;
-  margin-top: 25px;
+  width: 224px;
+  height: 50px;
+  /* margin-top: 25px; */
   color: #f05237;
   border: #f05237 2px solid;
   box-shadow: 11px 4px 20px 9px rgba(0, 0, 0, 0.25);
@@ -38,6 +58,9 @@
   color: #032032;
   border: #032032 2px solid;
 }
+.header img {
+  max-width: 10%;
+}
 
 .card-container {
   /* background-color: #173b6b; */
@@ -50,10 +73,9 @@
   justify-content: space-between;
 }
 
-/* .dashboard {
+.dashboard {
   display: flex;
-  text-align: center;
-} */
+}
 
 .card-img {
   width: 80%;
@@ -65,7 +87,7 @@
   /* background-image: url("./assets/tang-bkgd.png"); */
   background: #032032;
   border: 0;
-  color: #f05237;
+  color: #f8ab48;
   cursor: pointer;
   padding: 1rem;
   margin: 2rem auto;
@@ -80,8 +102,8 @@
   width: 5rem;
   height: 2rem;
   margin-top: 25px;
-  color: #f05237;
-  border: #f05237 2px solid;
+  color: #f8ab48;
+  border: #f8ab48 2px solid;
   box-shadow: 11px 4px 20px 9px rgba(0, 0, 0, 0.25);
   font-size: 1rem;
   border-radius: 10px;
@@ -97,7 +119,8 @@
   padding-top: 1rem;
   font-size: 2rem;
   font-family: "roboto";
-  color: #f05237;
+
+  color: #f8ab48;
 }
 
 .card:hover {

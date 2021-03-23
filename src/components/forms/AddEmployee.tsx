@@ -28,17 +28,17 @@ function AddEmployee(props: any){
         props.addEmployee(newEmployee)
         props.history.push('/')
         
-        setNewEmployee({
-        first_name: "",
-        last_name: "",
-        phone: "",
-        email: "",
-        address: "",
-        city: "",
-        state: "",
-        zip: "",
-        photo: "",
-        notes: ""})
+        // setNewEmployee({
+        // first_name: "",
+        // last_name: "",
+        // phone: "",
+        // email: "",
+        // address: "",
+        // city: "",
+        // state: "",
+        // zip: "",
+        // photo: "",
+        // notes: ""})
     }
     
 
