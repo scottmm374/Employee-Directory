@@ -15,18 +15,28 @@ const ProfilePage = (props) => {
 
     return (
         <div className="profile-page">
+           
             <div className="left-side">
-            <img src={`${props.employee.photo}`} alt={props.employee.first_name}/>
-            <h1>{props.employee.first_name} {props.employee.last_name}</h1>
+            <div className="header_first_name"><h1>{props.employee.first_name}</h1></div>
+                <img src={`${props.employee.photo}`} alt={props.employee.first_name}/>
+                <Link to="/update-employee"><span></span>
+           <span></span>
+           <span></span>
+           <span></span><button className="edit_button">Edit Profile</button></Link>
+            
             </div>
-            < div className="right-side">
-            <p>Phone :{props.employee.phone}</p>
-            <p>Email: {props.employee.email}</p>
-            <p>Street:{props.employee.address}</p>
-            <p>City:{props.employee.city} State: {props.employee.state}</p>
-            <p>Notes: {props.employee.notes}</p>
+            <div className="sideways-right">
+                    <h2>{props.employee.last_name}</h2>
+                </div>
+
+            <div className="right-side">
+            <p><h4>Phone :</h4>{props.employee.phone}</p>
+            <p><h4>Email :</h4>{props.employee.email}</p>
+            <p><h4>Street Address :</h4>{props.employee.address}</p>
+            <p><h4>City :</h4>{props.employee.city} State: {props.employee.state}</p>
+            <p><h4>Notes :</h4>{props.employee.notes}</p>
             </div>
-            <Link to="/update-employee"><button>Edit Profile</button></Link>
+            {/* <Link to="/update-employee"><button>Edit Profile</button></Link> */}
         </div>
     )
 }
