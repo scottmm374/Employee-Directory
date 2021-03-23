@@ -13,7 +13,7 @@ const initialState = {
     currentEmployee:[]
 }
 
- export function reducer(state = initialState, action){
+ export function rootReducer(state = initialState, action){
     switch(action.type) {
         case GET_ALL_PENDING: {
             return {
