@@ -15,14 +15,13 @@ const ProfilePage = (props) => {
 
     return (
         <div className="profile-page">
-           
-            <div className="left-side">
             <div className="header_first_name"><h1>{props.employee.first_name}</h1></div>
-                <img src={`${props.employee.photo}`} alt={props.employee.first_name}/>
-                <Link to="/update-employee"><span></span>
-           <span></span>
-           <span></span>
-           <span></span><button className="edit_button">Edit Profile</button></Link>
+            
+           <div className="main-content">
+            <div className="left-side">
+            {/* <div className="header_first_name"><h1>{props.employee.first_name}</h1></div> */}
+                <p><img src={`${props.employee.photo}`} alt={props.employee.first_name}/></p>
+                <Link to="/update-employee"><button className="edit_button">Edit Profile</button></Link>
             
             </div>
             <div className="sideways-right">
@@ -30,13 +29,19 @@ const ProfilePage = (props) => {
                 </div>
 
             <div className="right-side">
-            <p><h4>Phone :</h4>{props.employee.phone}</p>
-            <p><h4>Email :</h4>{props.employee.email}</p>
-            <p><h4>Street Address :</h4>{props.employee.address}</p>
-            <p><h4>City :</h4>{props.employee.city} State: {props.employee.state}</p>
-            <p><h4>Notes :</h4>{props.employee.notes}</p>
+                <div className="information">
+            <div><h4>Phone: </h4>{props.employee.phone}</div>
+            <div><h4>Email: </h4>{props.employee.email}</div>
+            <div><h4>Street Address: </h4>{props.employee.address}</div>
+            <div><h4>City :</h4>{props.employee.city}</div> 
+            <div><h4>State:</h4>{props.employee.state}</div>
             </div>
-            {/* <Link to="/update-employee"><button>Edit Profile</button></Link> */}
+            
+            <div className="notes"><h4>Notes</h4><br/><br/>{props.employee.notes}</div>
+            </div>
+
+            </div>
+            
         </div>
     )
 }
