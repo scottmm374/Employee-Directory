@@ -4,16 +4,15 @@
   /* background-color: #173b6b; */
 }
 
-.App-link {
+/* .App-link {
   color: #61dafb;
-}
+} */
 
 .sideways {
   writing-mode: vertical-rl;
   text-orientation: mixed;
   margin-top: 2rem;
   font-family: Roboto;
-  /* font-style: thin; */
   font-weight: 100;
   font-size: 75px;
   line-height: 112px;
@@ -21,7 +20,7 @@
   letter-spacing: 1.45em;
   color: #f8ab48;
   text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-  /* transform: rotate(90deg); */
+  margin-left: 57px;
 }
 
 .header {
@@ -31,6 +30,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
 }
 
 .header h1 {
@@ -59,33 +59,39 @@
   color: #032032;
   border: #032032 2px solid;
 }
+
 .header img {
-  max-width: 10%;
+  /* max-width: 10%; */
+  width: 20%;
 }
 
 .card-container {
   /* background-color: #173b6b; */
-  width: 80%;
+  width: 75%;
   margin-right: 2rem;
   margin-left: 8rem;
   margin-top: 4rem;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
+
+.icons-card {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 60px;
+}
+
+/* .top-card-section {
+  box-shadow: 11px 0px 20px 0px rgba(0, 0, 0, 0.25);
+  width: 100%;
+} */
 
 .dashboard {
   display: flex;
 }
 
-.card-img {
-  width: 80%;
-  height: 50%;
-  border-radius: 20px;
-}
-
 .card {
-  /* background-image: url("./assets/tang-bkgd.png"); */
   background: #032032;
   border: 0;
   color: #f8ab48;
@@ -98,9 +104,49 @@
   border-radius: 10px;
 }
 
+.card-icons {
+  background-color: #021b2b;
+  /* border: 1px solid #f9a54b; */
+
+  padding: 20px;
+  border-radius: 50%;
+  /* box-shadow: 11px 4px 20px 9px rgba(0, 0, 0, 0.25); */
+}
+
+.card-icons:hover {
+  background: #f9a54b;
+  color: #fff;
+  /* border-radius: 50px; */
+  box-shadow: 0 0 5px #f05237, 0 0 25px #f05237, 0 0 50px #f05237, 0 0 100px #f05237;
+}
+
+.first-name-card {
+  font-size: 1.75rem;
+  font-family: "roboto";
+  font-weight: 200;
+
+  color: #f8ab48;
+}
+
+.last-name-card {
+  font-size: 1.75rem;
+  font-family: "roboto";
+  font-weight: 100;
+
+  color: #f05237;
+}
+
+.card-img {
+  width: 80%;
+  height: 50%;
+  border-radius: 20px;
+  border: 5px solid #f05237;
+  /* box-shadow: 0 0 5px #f05237, 0 0 25px #f05237, 0 0 50px #f05237, 0 0 100px #f05237; */
+}
+
 .card button {
-  background-color: #032032;
-  border: #032032 1px;
+  background-color: #021b2b;
+  border: #021b2b 1px;
   position: relative;
   display: inline-block;
   padding: 10px 20px;
@@ -108,6 +154,7 @@
   font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
+  /* text-align: center; */
   overflow: hidden;
   transition: 0.5s;
   margin-top: 40px;
@@ -121,11 +168,9 @@
   box-shadow: 0 0 5px #f05237, 0 0 25px #f05237, 0 0 50px #f05237, 0 0 100px #f05237;
 }
 .name-card {
+  display: flex;
+  justify-content: space-evenly;
   padding-top: 1rem;
-  font-size: 2rem;
-  font-family: "roboto";
-
-  color: #f8ab48;
 }
 
 .card:hover {
@@ -141,13 +186,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  /* width: 400px; */
   width: 80%;
-
   padding: 40px;
   transform: translate(-50%, -50%);
   background: #032032;
-
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
@@ -303,10 +345,31 @@
   padding: 2%;
   width: 75%;
   margin: 0 auto;
-  /* border: yellow 1px solid; */
 
-  /* display: flex; */
   color: rgb(240, 82, 55);
+}
+
+.header_profile {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  justify-content: space-around;
+  /* text-align: start; */
+  width: 100%;
+  border: coral 1px dotted;
+}
+
+.header_profile h1 {
+  font-family: "roboto";
+  font-weight: 100;
+  font-size: 4rem;
+  letter-spacing: 0.89em;
+  color: #f05237;
+  text-align: start;
+}
+
+.header_profile button {
+  align-self: flex-start;
 }
 
 .sideways-right {
@@ -335,29 +398,8 @@
   /* border: blueviolet 1px solid; */
 }
 
-.header_first_name {
-  margin-top: 2rem;
-  margin-bottom: 5rem;
-  /* margin-left: 8rem; */
-  font-family: "roboto";
-  font-weight: 100;
-  font-size: 4rem;
-  letter-spacing: 0.89em;
-  color: #f05237;
-  text-align: start;
-  width: 100%;
-  border: coral 1px dotted;
-}
-
 .left-side {
-  box-shadow: 11px 4px 20px 9px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  /* border: white 1px solid; */
   display: block;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: space-around; */
-  /* align-self: center; */
   padding: 2rem;
   width: 40%;
 }
@@ -366,29 +408,22 @@
   max-width: 60%;
   margin-bottom: 1rem;
   height: auto;
-  /* align-self: stretch; */
+  border-radius: 20px;
+  border: 5px solid #f05237;
 }
 
 .right-side {
-  /* box-shadow: 11px 4px 20px 9px rgba(0, 0, 0, 0.25); */
-  /* border-radius: 10px; */
   padding: 1%;
   display: flex;
   flex-direction: column;
-
-  /* border: greenyellow 1px solid; */
   width: 30%;
 }
 
 .information {
-  /* text-align: left; */
   padding: 1%;
   width: 80%;
-  /* margin: 0 auto; */
   display: flex;
   flex-direction: column;
-  /* border: 1px dotted green; */
-
   justify-content: center;
 }
 
@@ -410,7 +445,8 @@
   /* width: 60%; */
 }
 
-.edit_button {
+.edit_button,
+.home_button {
   background-color: #032032;
   border: #032032 1px;
   position: relative;
@@ -426,7 +462,8 @@
   letter-spacing: 4px;
 }
 
-.edit_button:hover {
+.edit_button:hover,
+.home_button:hover {
   background: #f9a54b;
   color: #fff;
   border-radius: 5px;

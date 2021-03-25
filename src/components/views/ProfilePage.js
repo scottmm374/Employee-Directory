@@ -4,6 +4,9 @@ import {connect} from 'react-redux'
 import {getEmpById} from '../../redux/actions'
 import UpdateEmployee from '../forms/UpdateEmployee'
 import {Link} from 'react-router-dom'
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const ProfilePage = (props) => {
     const {id} = props.match.params
@@ -15,11 +18,10 @@ const ProfilePage = (props) => {
 
     return (
         <div className="profile-page">
-            <div className="header_first_name"><h1>{props.employee.first_name}</h1></div>
+            <div className="header_profile"><h1>{props.employee.first_name}</h1><Link to="/"><FontAwesomeIcon icon={faHome} className="home_button">Home</FontAwesomeIcon></Link></div>
             
            <div className="main-content">
             <div className="left-side">
-            {/* <div className="header_first_name"><h1>{props.employee.first_name}</h1></div> */}
                 <p><img src={`${props.employee.photo}`} alt={props.employee.first_name}/></p>
                 <Link to="/update-employee"><button className="edit_button">Edit Profile</button></Link>
             
