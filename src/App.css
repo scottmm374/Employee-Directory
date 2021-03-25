@@ -41,28 +41,28 @@
   color: #f05237;
 }
 
-.header button {
+/* .header button {
   background: #032032;
   width: 224px;
   height: 50px;
   /* margin-top: 25px; */
-  color: #f05237;
+/* color: #f05237;
   border: #f05237 2px solid;
   box-shadow: 11px 4px 20px 9px rgba(0, 0, 0, 0.25);
   font-size: 1rem;
   border-radius: 10px;
-}
+} */
 
-.header button:hover {
-  /* background: #032032; */
-  background: rgb(240, 82, 55);
-  color: #032032;
-  border: #032032 2px solid;
-}
+/* .header button:hover { */
+/* background: #032032; */
+/* background: rgb(240, 82, 55); */
+/* color: #032032; */
+/* border: #032032 2px solid; */
+/* }  */
 
 .header img {
   /* max-width: 10%; */
-  width: 20%;
+  width: 12%;
 }
 
 .card-container {
@@ -234,6 +234,7 @@
   color: #03e9f4;
   font-size: 12px;
 }
+.add-employee-button,
 .employee_form form button {
   background-color: #032032;
   border: #032032 1px;
@@ -250,6 +251,7 @@
   letter-spacing: 4px;
 }
 
+.add-employee-button:hover,
 .employee_form button:hover {
   background: #f9a54b;
   /* color: #fff; */
@@ -257,11 +259,13 @@
   box-shadow: 0 0 5px #f05237, 0 0 25px #f05237, 0 0 50px #f05237, 0 0 100px #f05237;
 }
 
+.add-employee-button span,
 .employee_form button span {
   position: absolute;
   display: block;
 }
 
+.add-employee-button span:nth-child(1),
 .employee_form button span:nth-child(1) {
   top: 0;
   left: -100%;
@@ -281,6 +285,7 @@
   }
 }
 
+.add-employee-button span:nth-child(2),
 .employee_form button span:nth-child(2) {
   top: -100%;
   right: 0;
@@ -301,6 +306,7 @@
   }
 }
 
+.add-employee-button span:nth-child(3),
 .employee_form button span:nth-child(3) {
   bottom: 0;
   right: -100%;
@@ -321,6 +327,7 @@
   }
 }
 
+.add-employee-button span:nth-child(4),
 .employee_form button span:nth-child(4) {
   bottom: -100%;
   left: 0;
