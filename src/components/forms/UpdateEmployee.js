@@ -2,6 +2,9 @@ import {useState} from 'react'
 import {update, getEmpById} from '../../redux/actions'
 import {useHistory} from 'react-router-dom'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
+import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 
@@ -27,10 +30,14 @@ function UpdateEmployee(props){
     return (
         <div lassName='form-container'>
         <div className='employee_form'>
+        <div className="form-header">
         <h2>Update Employee</h2>
+            <div><Link to="/employee/updateEmployee.id"><FontAwesomeIcon icon={faTimesCircle} className="close-button" size="3x"></FontAwesomeIcon></Link></div>
+            
+            
+            </div>
         <form onSubmit={handleSubmit}>
             <div className= "form-input">
-            {/* <label>First Name</label> */}
            <input
            type='text'
            name='first_name'
@@ -39,7 +46,6 @@ function UpdateEmployee(props){
            onChange={handleChange} />
            </div>
            <div className= "form-input">
-           {/* <label>Last Name</label> */}
            <input
            type='text'
            name='last_name'
@@ -47,7 +53,6 @@ function UpdateEmployee(props){
            onChange={handleChange} />
            </div>
            <div className= "form-input">
-           {/* <label>Phone Number</label> */}
            <input
            type='text'
            name='phone'
@@ -55,7 +60,6 @@ function UpdateEmployee(props){
            onChange={handleChange} />
            </div>
            <div className= "form-input">
-           {/* <label>Email</label> */}
            <input
            type='text'
            name='email'
@@ -63,7 +67,6 @@ function UpdateEmployee(props){
            onChange={handleChange} />
            </div>
            <div className= "form-input">
-           {/* <label>Address</label> */}
            <input
            type='text'
            name='address'
@@ -71,7 +74,6 @@ function UpdateEmployee(props){
            onChange={handleChange} />
            </div>
            <div className= "form-input">
-           {/* <label>City</label> */}
            <input
            type='text'
            name='city'
@@ -79,7 +81,6 @@ function UpdateEmployee(props){
            onChange={handleChange} />
            </div>
            <div className= "form-input">
-           {/* <label>State</label> */}
            <input
            type='text'
            name='state'
@@ -87,7 +88,6 @@ function UpdateEmployee(props){
            onChange={handleChange} />
            </div>
            <div className= "form-input">
-           {/* <label>Zip Code</label> */}
            <input
            type='text'
            name='zip'
@@ -95,7 +95,6 @@ function UpdateEmployee(props){
            onChange={handleChange} />
            </div>
            <div className= "form-input">
-           {/* <label>Photo URL</label> */}
            <input
            type='text'
            name='photo'
@@ -103,7 +102,6 @@ function UpdateEmployee(props){
            onChange={handleChange} />
            </div>
            <div className= "form-input">
-           {/* <label>Notes</label> */}
            <textarea
            type='text'
            name='notes'
