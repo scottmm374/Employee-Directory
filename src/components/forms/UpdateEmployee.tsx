@@ -9,18 +9,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 
-function UpdateEmployee(props){
+function UpdateEmployee(props: any){
     console.log(props, "props in update")
     const [updateEmployee, setUpdateEmployee] = useState(props.currentEmployee)
     const history = useHistory()
    
 
-    const handleChange = event => {
+    const handleChange = (event: any) => {
         event.preventDefault()
         setUpdateEmployee({...updateEmployee, [event.target.name]: event.target.value})
     }
 
-    const handleSubmit = (event) => {
+    const handleSubmit = (event: any) => {
         event.preventDefault()
         props.update(props.currentEmployee.id, updateEmployee)
         history.push('/employee/updateEmployee.id')
@@ -28,7 +28,7 @@ function UpdateEmployee(props){
     
 
     return (
-        <div lassName='form-container'>
+        <div className='form-container'>
         <div className='employee_form'>
         <div className="form-header">
         <h2>Update Employee</h2>
@@ -42,7 +42,6 @@ function UpdateEmployee(props){
            type='text'
            name='first_name'
            value={updateEmployee.first_name}
-           required='First Name Required'
            onChange={handleChange} />
            </div>
            <div className= "form-input">
@@ -101,13 +100,13 @@ function UpdateEmployee(props){
            value={updateEmployee.photo}
            onChange={handleChange} />
            </div>
-           <div className= "form-input">
+           {/* <div className= "form-input">
            <textarea
            type='text'
            name='notes'
            value={updateEmployee.notes}
            onChange={handleChange} />
-           </div>
+           </div> */}
            
            <button>
            <span></span>
@@ -124,7 +123,7 @@ function UpdateEmployee(props){
 
 }
 
-function mapStateToProps(state) {
+function mapStateToProps(state: any) {
     return {
         error: state.error,
         currentEmployee: state.currentEmployee   
