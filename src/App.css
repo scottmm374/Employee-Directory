@@ -182,6 +182,13 @@
   background: rgba(0, 0, 0, 0.25);
 }
 
+.form-header {
+  display: flex;
+  justify-content: space-between;
+}
+.form-header h2 {
+  font-size: 2rem;
+}
 .employee_form {
   position: absolute;
   top: 50%;
@@ -457,13 +464,15 @@
   font-weight: 400;
 } */
 
-.home_button {
+.home_button,
+.close-button {
   border: #032032 1px;
   color: #f9a54b;
   transition: 0.5s;
 }
 
-.home_button:hover {
+.home_button:hover,
+.close-button:hover {
   background: #f9a54b;
   color: #fff;
   border-radius: 5px;

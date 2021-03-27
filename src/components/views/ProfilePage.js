@@ -18,7 +18,7 @@ const ProfilePage = (props) => {
 
     return (
         <div className="profile-page">
-            <div className="header_profile"><h1>{props.employee.first_name}</h1><Link to="/"><FontAwesomeIcon icon={faHome} className="home_button">Home</FontAwesomeIcon></Link></div>
+            <div className="header_profile"><h1>{props.employee.first_name}</h1><Link to="/"><FontAwesomeIcon icon={faHome} className="home_button" size="3x">Home</FontAwesomeIcon></Link></div>
             
            <div className="main-content">
             <div className="left-side">
