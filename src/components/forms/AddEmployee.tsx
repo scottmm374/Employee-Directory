@@ -1,6 +1,9 @@
 import {useState} from 'react'
 import {addEmployee} from '../../redux/actions'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
+import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 function AddEmployee(props: any){
@@ -45,7 +48,10 @@ function AddEmployee(props: any){
     return (
         <div className="form-container">
     <div className='employee_form'>
+        <div className="form-header">
         <h2>Add New Employee</h2>
+        <div><Link to="/"><FontAwesomeIcon icon={faTimesCircle} className="close-button" size="3x"></FontAwesomeIcon></Link></div>
+        </div>
         <form onSubmit={handleSubmit}>
             <div className= "form-input">
            <input
