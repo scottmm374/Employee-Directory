@@ -104,8 +104,8 @@
   width: 80%;
   height: 50%;
   border-radius: 20px;
-  border: 5px solid #f05237;
-  /* box-shadow: 0 0 5px #f05237, 0 0 25px #f05237, 0 0 50px #f05237, 0 0 100px #f05237; */
+  /* border: 5px solid #f05237; */
+  border: 3px dashed #03e9f4;
 }
 
 .card button {
@@ -118,7 +118,6 @@
   font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
-  /* text-align: center; */
   overflow: hidden;
   transition: 0.5s;
   margin-top: 40px;
@@ -152,6 +151,7 @@
 }
 .form-header h2 {
   font-size: 2rem;
+  color: #f05237;
 }
 .employee-form {
   position: absolute;
@@ -173,11 +173,11 @@
 .employee-form .form-input input {
   width: 100%;
   padding: 10px 0;
-  font-size: 16px;
+  font-size: 1.5rem;
   color: #f05237;
   margin-bottom: 30px;
   border: none;
-  border-bottom: 1px solid #f05237;
+  border-bottom: 2px dashed #03e9f4;
   outline: none;
   background: transparent;
 }
@@ -206,7 +206,7 @@
   position: relative;
   display: inline-block;
   padding: 10px 20px;
-  color: #f05237;
+  color: #f9a54b;
   font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
@@ -219,8 +219,8 @@
 .add-employee-button:hover,
 .employee-form button:hover {
   background: #f9a54b;
-  /* color: #fff; */
   border-radius: 5px;
+  color: #ffffff;
   box-shadow: 0 0 5px #f05237, 0 0 25px #f05237, 0 0 50px #f05237, 0 0 100px #f05237;
 }
 
@@ -277,7 +277,7 @@
   right: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg, transparent, #4be1f9);
+  background: linear-gradient(270deg, transparent, #f9a54b);
   animation: btn-anim3 1s linear infinite;
   animation-delay: 0.5s;
 }
@@ -311,6 +311,16 @@
   100% {
     bottom: 100%;
   }
+}
+
+textarea {
+  background: #f9a54b;
+  outline: none;
+  border: #04304c 3px dashed;
+  font-family: "roboto";
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 1%;
 }
 
 .profile-page {
@@ -370,7 +380,8 @@
   margin-bottom: 1rem;
   height: auto;
   border-radius: 20px;
-  border: 5px solid #f05237;
+  /* border: 5px solid #f05237; */
+  border: 3px dashed #03e9f4;
 }
 
 .right-side {
@@ -390,14 +401,15 @@
 }
 
 .information div {
-  padding-top: 3%;
+  padding-top: 3.5%;
   font-weight: 100;
   font-size: 1.25rem;
   color: #f05237;
   margin: 1.5% 0;
   display: flex;
   justify-content: space-between;
-  border-bottom: #04304c 3px dashed;
+  /* border-bottom: #04304c 3px dashed; */
+  border-bottom: 2px dashed #03e9f4;
 }
 
 .information h4 {

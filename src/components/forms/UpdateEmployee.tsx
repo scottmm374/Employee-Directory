@@ -138,7 +138,8 @@ function UpdateEmployee(props: any){
            value={updateEmployee.photo}
            onChange={handleChange} />
            </div>
-           <div className= "form-input">
+
+           <div className= "form-input text-area">
            <textarea
            ref={register}
            name='notes'
