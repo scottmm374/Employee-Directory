@@ -314,6 +314,15 @@
   }
 }
 
+textarea {
+  background: #f9a54b;
+  outline: none;
+  border: #04304c 3px dashed;
+  font-family: "roboto";
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
 .profile-page {
   padding: 2%;
   width: 75%;
