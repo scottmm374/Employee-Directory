@@ -23,21 +23,26 @@
   background: #032032;
   height: 40%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
 }
 
 .header h1 {
   font-family: "roboto";
-  font-weight: 300;
-  font-size: 5rem;
+  font-weight: 200;
+  font-size: 6rem;
   letter-spacing: 0.29em;
   color: #f05237;
+  margin-left: 20px;
+}
+
+.add-employee-container {
+  width: 20%;
 }
 
 .header img {
-  width: 12%;
+  width: 10%;
 }
 
 .card-container {
@@ -67,7 +72,7 @@
   cursor: pointer;
   padding: 1rem;
   margin: 2rem auto;
-  width: 18%;
+  width: 20%;
   height: auto;
   box-shadow: 11px 4px 20px 9px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -88,24 +93,22 @@
 .first-name-card {
   font-size: 1.75rem;
   font-family: "roboto";
-  font-weight: 200;
+  font-weight: 300;
   color: #f8ab48;
 }
 
 .last-name-card {
   font-size: 1.75rem;
   font-family: "roboto";
-  font-weight: 100;
-
-  color: #f05237;
+  font-weight: 300;
+  color: #f8ab48;
 }
 
 .card-img {
   width: 80%;
   height: 50%;
   border-radius: 20px;
-  /* border: 5px solid #f05237; */
-  border: 3px dashed #03e9f4;
+  border: 2px solid #f05237;
 }
 
 .card button {
@@ -133,7 +136,7 @@
 .name-card {
   display: flex;
   justify-content: space-evenly;
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 
 .card:hover {
@@ -380,8 +383,7 @@ textarea {
   margin-bottom: 1rem;
   height: auto;
   border-radius: 20px;
-  /* border: 5px solid #f05237; */
-  border: 3px dashed #03e9f4;
+  border: 5px solid #f05237;
 }
 
 .right-side {
@@ -408,19 +410,24 @@ textarea {
   margin: 1.5% 0;
   display: flex;
   justify-content: space-between;
-  /* border-bottom: #04304c 3px dashed; */
-  border-bottom: 2px dashed #03e9f4;
+  border-bottom: #04304c 3px dashed;
 }
 
 .information h4 {
   font-weight: 300;
 }
+
 .notes {
   margin-top: 2.5rem;
   padding: 1%;
   width: 100%;
   text-align: left;
   color: #f9a54b;
+}
+
+.notes h4 {
+  font-weight: 300;
+  font-size: 1.5rem;
 }
 
 .home-button,
