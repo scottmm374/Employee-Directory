@@ -23,21 +23,27 @@
   background: #032032;
   height: 40%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
 }
 
 .header h1 {
   font-family: "roboto";
-  font-weight: 300;
-  font-size: 5rem;
+  font-weight: 200;
+  font-size: 6rem;
   letter-spacing: 0.29em;
   color: #f05237;
+  margin-left: 20px;
+}
+
+.add-employee-container {
+  width: 20%;
 }
 
 .header img {
-  width: 12%;
+  width: 10%;
+  margin-left: 20px;
 }
 
 .card-container {
@@ -67,7 +73,7 @@
   cursor: pointer;
   padding: 1rem;
   margin: 2rem auto;
-  width: 18%;
+  width: 20%;
   height: auto;
   box-shadow: 11px 4px 20px 9px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -77,6 +83,7 @@
   background-color: #021b2b;
   padding: 20px;
   border-radius: 50%;
+  box-shadow: 6px 5px 20px 7px rgba(0, 0, 0, 0.25);
 }
 
 .card-icons:hover {
@@ -85,27 +92,25 @@
   box-shadow: 0 0 5px #f05237, 0 0 25px #f05237, 0 0 50px #f05237, 0 0 100px #f05237;
 }
 
-.first-name-card {
+/* .first-name-card {
   font-size: 1.75rem;
   font-family: "roboto";
-  font-weight: 200;
+  font-weight: 300;
   color: #f8ab48;
 }
 
 .last-name-card {
   font-size: 1.75rem;
   font-family: "roboto";
-  font-weight: 100;
-
-  color: #f05237;
-}
+  font-weight: 300;
+  color: #f8ab48;
+} */
 
 .card-img {
   width: 80%;
   height: 50%;
   border-radius: 20px;
-  /* border: 5px solid #f05237; */
-  border: 3px dashed #03e9f4;
+  border: 2px solid #f05237;
 }
 
 .card button {
@@ -122,6 +127,8 @@
   transition: 0.5s;
   margin-top: 40px;
   letter-spacing: 4px;
+  border-radius: 5px;
+  box-shadow: 6px 5px 20px 7px rgba(0, 0, 0, 0.25);
 }
 
 .card button:hover {
@@ -133,13 +140,16 @@
 .name-card {
   display: flex;
   justify-content: space-evenly;
-  padding-top: 1rem;
+  padding-top: 2rem;
+  text-transform: uppercase;
+  overflow: hidden;
+  font-size: 1.5rem;
+  font-family: "roboto";
+  font-weight: 300;
+  color: #f8ab48;
 }
 
-.card:hover {
-  transform: scale(1.5);
-  box-shadow: 11px 4px 20px 9px rgba(0, 0, 0, 0.25);
-}
+/* FORMS */
 
 .form-container {
   background: rgba(0, 0, 0, 0.25);
@@ -150,8 +160,10 @@
   justify-content: space-between;
 }
 .form-header h2 {
-  font-size: 2rem;
-  color: #f05237;
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: #f8ab48;
+  margin-bottom: 3rem;
 }
 .employee-form {
   position: absolute;
@@ -323,18 +335,19 @@ textarea {
   padding: 1%;
 }
 
+/* PROFILE PAGE */
+
 .profile-page {
   padding: 2%;
   width: 75%;
   margin: 0 auto;
-
   color: rgb(240, 82, 55);
 }
 
 .header-profile {
   display: flex;
   margin-top: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
   justify-content: space-around;
   width: 100%;
 }
@@ -343,21 +356,23 @@ textarea {
   font-family: "roboto";
   font-weight: 100;
   font-size: 4rem;
+  text-transform: uppercase;
   letter-spacing: 0.89em;
   color: #f05237;
   margin-left: -142px;
 }
 
 .sideways-profile-name {
+  text-transform: uppercase;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   margin-left: 2rem;
   margin-right: 2rem;
   font-family: Roboto;
   font-weight: 100;
-  font-size: 4rem;
+  font-size: 3.5rem;
   text-align: start;
-  letter-spacing: 0.89em;
+  letter-spacing: 0.69em;
   color: #f8ab48;
   text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
   height: 20%;
@@ -380,8 +395,16 @@ textarea {
   margin-bottom: 1rem;
   height: auto;
   border-radius: 20px;
-  /* border: 5px solid #f05237; */
-  border: 3px dashed #03e9f4;
+  border: 5px solid #f05237;
+  margin-top: -30px;
+}
+.left-side h4 {
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 1rem;
+  letter-spacing: 0.69em;
+  color: #f8ab48;
+  text-shadow: 0px 10px 6px rgba(0, 0, 0, 0.801);
 }
 
 .right-side {
@@ -408,13 +431,13 @@ textarea {
   margin: 1.5% 0;
   display: flex;
   justify-content: space-between;
-  /* border-bottom: #04304c 3px dashed; */
-  border-bottom: 2px dashed #03e9f4;
+  border-bottom: #04304c 3px dashed;
 }
 
 .information h4 {
   font-weight: 300;
 }
+
 .notes {
   margin-top: 2.5rem;
   padding: 1%;
@@ -423,19 +446,9 @@ textarea {
   color: #f9a54b;
 }
 
-.home-button,
-.close-button {
-  border: #032032 1px;
-  color: #f9a54b;
-  transition: 0.5s;
-}
-
-.home-button:hover,
-.close-button:hover {
-  background: #f9a54b;
-  color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #f05237, 0 0 25px #f05237, 0 0 50px #f05237, 0 0 100px #f05237;
+.notes h4 {
+  font-weight: 300;
+  font-size: 1.5rem;
 }
 
 .edit-button {
@@ -452,9 +465,27 @@ textarea {
   transition: 0.5s;
   margin-top: 40px;
   letter-spacing: 4px;
+  box-shadow: 6px 5px 20px 7px rgba(0, 0, 0, 0.25);
 }
 
 .edit-button:hover {
+  background: #f9a54b;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #f05237, 0 0 25px #f05237, 0 0 50px #f05237, 0 0 100px #f05237;
+}
+
+/* Misc Buttons */
+
+.home-button,
+.close-button {
+  border: #032032 1px;
+  color: #f9a54b;
+  transition: 0.5s;
+}
+
+.home-button:hover,
+.close-button:hover {
   background: #f9a54b;
   color: #fff;
   border-radius: 5px;

@@ -1,6 +1,8 @@
 # Rivet Challenge
     Developed by Michelle Scott
 
+![Rosie](/src/assets/rosie.svg)
+
 ## Instructions to clone repo
     - Clone repo
     - Navigate to Root directory

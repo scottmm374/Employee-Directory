@@ -24,6 +24,7 @@ const ProfilePage = (props) => {
             <div className="main-content">
                 <div className="left-side">
                     <p><img src={`${props.employee.photo}`} alt={props.employee.first_name}/></p>
+                    <h4>{props.employee.first_name} {props.employee.last_name}</h4>
                     <Link to="/update-employee"><button className="edit-button">Edit Profile</button></Link>
                     
                 </div>
