@@ -150,7 +150,7 @@ function AddEmployee(props: any){
                         type='text'
                         name='photo'
                         value={newEmployee.photo}
-                        placeholder="link tp profile photo"
+                        placeholder="Link to profile photo"
                         onChange={handleChange} />
                     </div>
 
