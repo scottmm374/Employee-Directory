@@ -7,7 +7,7 @@ const  EmployeeDashboard = () =>{
         <>
          <Header />
          <div className='dashboard'>
-         <div className="sideways"><h2>Rivet</h2></div>
+         <div className="sideways-title"><h2>Rivet</h2></div>
         <EmployeeCard />
         </div>
         </>
