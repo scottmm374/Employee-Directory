@@ -28,7 +28,7 @@ const ProfilePage = (props) => {
                     
                 </div>
 
-                <div className="sideways-right">
+                <div className="sideways-profile-name">
                     <h2>{props.employee.last_name}</h2>
                 </div>
 
