@@ -43,7 +43,7 @@ function UpdateEmployee(props: any){
         <div className='employee_form'>
         <div className="form-header">
         <h2>Update Employee</h2>
-            <div><Link to="/employee/updateEmployee.id"><FontAwesomeIcon icon={faTimesCircle} className="close-button" size="3x"></FontAwesomeIcon></Link></div>
+            <div><Link to="/employee/updateEmployee.id"><FontAwesomeIcon icon={faTimesCircle} className="close-button" size="3x"/></Link></div>
             
             
             </div>
@@ -132,18 +132,19 @@ function UpdateEmployee(props: any){
 
            <div className= "form-input">
            <input
+           ref={register}
            type='text'
            name='photo'
            value={updateEmployee.photo}
            onChange={handleChange} />
            </div>
-           {/* <div className= "form-input">
+           <div className= "form-input">
            <textarea
-           type='text'
+           ref={register}
            name='notes'
            value={updateEmployee.notes}
            onChange={handleChange} />
-           </div> */}
+           </div> 
            
            <button>
            <span></span>

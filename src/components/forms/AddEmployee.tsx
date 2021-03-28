@@ -50,121 +50,129 @@ function AddEmployee(props: any){
 
     return (
         <div className="form-container">
-    <div className='employee_form'>
-        <div className="form-header">
-        <h2>Add New Employee</h2>
-        <div><Link to="/"><FontAwesomeIcon icon={faTimesCircle} className="close-button" size="3x"></FontAwesomeIcon></Link></div>
-        </div>
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <div className= "form-input">
-           <input
-           ref={register({required: true})} 
-           type='text'
-           name='first_name'
-           value={newEmployee.first_name}
-           placeholder="First Name"
-           onChange={handleChange} />
-           {errors.first_name && errors.first_name.type === "required" && (<div className="error">You must enter your First name.</div>)}
-           </div>
-           <div className= "form-input">
-           <input
-           ref={register({required: true})} 
-           type='text'
-           name='last_name'
-           value={newEmployee.last_name}
-           placeholder="Last Name"
-           onChange={handleChange} />
-           {errors.last_name && errors.last_name.type === "required" && (<div className="error">You must enter your Last name.</div>)}
-           </div>
-           <div className= "form-input">
-           <input
-           ref={register({required: true})} 
-           type='text'
-           name='phone'
-           value={newEmployee.phone}
-           placeholder="Phone Number"
-           onChange={handleChange} />
-           {errors.phone && errors.phone.type === "required" && (<div className="error">You must enter Phone number.</div>)}
-           </div>
-           <div className= "form-input">
-           <input
-           ref={register({required: true})}
-           type='text'
-           name='email'
-           value={newEmployee.email}
-           placeholder="Email"
-           onChange={handleChange} />
-           {errors.email && errors.email.type === "required" && (<div className="error">You must enter your Email.</div>)}
-           </div>
-           <div className= "form-input">
-           <input
-           ref={register({required: true})}
-           type='text'
-           name='address'
-           value={newEmployee.address}
-           placeholder="Address"
-           onChange={handleChange} />
-           {errors.address && errors.address.type === "required" && (<div className="error">You must enter your Street Address.</div>)}
-           </div>
-           <div className= "form-input">
-           <input
-           ref={register({required: true})}
-           type='text'
-           name='city'
-           value={newEmployee.city}
-           placeholder="City"
-           onChange={handleChange} />
-           {errors.city && errors.city.type === "required" && (<div className="error">You must enter your City.</div>)}
-           </div>
-           <div className= "form-input">
-           <input
-           ref={register({required: true})}
-           type='text'
-           name='state'
-           value={newEmployee.state}
-           placeholder="State"
-           onChange={handleChange} />
-           {errors.state && errors.state.type === "required" && (<div className="error">You must enter your State.</div>)}
-           </div>
-           <div className= "form-input">
-           <input
-           ref={register({required: true})}
-           type='text'
-           name='zip'
-           value={newEmployee.zip}
-           placeholder="Zip Code"
-           onChange={handleChange} />
-           {errors.zip && errors.zip.type === "required" && (<div className="error">You must enter your Zip Code.</div>)}
-           </div>
-           <div className= "form-input">
-           <input
-            ref={register}
-           type='text'
-           name='photo'
-           value={newEmployee.photo}
-           placeholder="link tp profile photo"
-           
-           onChange={handleChange} />
-           </div>
-           {/* <div className= "form-input">
-           <textarea
-           type='text'
-           name='notes'
-           value={newEmployee.notes}
-           placeholder="Notes"
-           onChange={handleChange} />
-           </div> */}
-           
-           <button>
-           <span></span>
-           <span></span>
-           <span></span>
-           <span></span>
-               Add Employee
-           </button>
-        </form>
+            <div className='employee_form'>
+                <div className="form-header">
+                    <h2>Add New Employee</h2>
+                    <div><Link to="/"><FontAwesomeIcon icon={faTimesCircle} className="close-button" size="3x"/></Link></div>
+                </div>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <div className= "form-input">
+                        <input
+                        ref={register({required: true})} 
+                        type='text'
+                        name='first_name'
+                        value={newEmployee.first_name}
+                        placeholder="First Name"
+                        onChange={handleChange} />
+                        {errors.first_name && errors.first_name.type === "required" && (<div className="error">You must enter your First name.</div>)}
+                    </div>
 
-    </div>
+                    <div className= "form-input">
+                        <input
+                        ref={register({required: true})} 
+                        type='text'
+                        name='last_name'
+                        value={newEmployee.last_name}
+                        placeholder="Last Name"
+                        onChange={handleChange} />
+                        {errors.last_name && errors.last_name.type === "required" && (<div className="error">You must enter your Last name.</div>)}
+                    </div>
+
+                    <div className= "form-input">
+                        <input
+                        ref={register({required: true})} 
+                        type='text'
+                        name='phone'
+                        value={newEmployee.phone}
+                        placeholder="Phone Number"
+                        onChange={handleChange} />
+                        {errors.phone && errors.phone.type === "required" && (<div className="error">You must enter Phone number.</div>)}
+                    </div>
+
+                    <div className= "form-input">
+                        <input
+                        ref={register({required: true})}
+                        type='text'
+                        name='email'
+                        value={newEmployee.email}
+                        placeholder="Email"
+                        onChange={handleChange} />
+                        {errors.email && errors.email.type === "required" && (<div className="error">You must enter your Email.</div>)}
+                    </div>
+
+                    <div className= "form-input">
+                        <input
+                        ref={register({required: true})}
+                        type='text'
+                        name='address'
+                        value={newEmployee.address}
+                        placeholder="Address"
+                        onChange={handleChange} />
+                        {errors.address && errors.address.type === "required" && (<div className="error">You must enter your Street Address.</div>)}
+                    </div>
+
+                    <div className= "form-input">
+                        <input
+                        ref={register({required: true})}
+                        type='text'
+                        name='city'
+                        value={newEmployee.city}
+                        placeholder="City"
+                        onChange={handleChange} />
+                        {errors.city && errors.city.type === "required" && (<div className="error">You must enter your City.</div>)}
+                    </div>
+
+                    <div className= "form-input">
+                        <input
+                        ref={register({required: true})}
+                        type='text'
+                        name='state'
+                        value={newEmployee.state}
+                        placeholder="State"
+                        onChange={handleChange} />
+                        {errors.state && errors.state.type === "required" && (<div className="error">You must enter your State.</div>)}
+                    </div>
+
+                    <div className= "form-input">
+                        <input
+                        ref={register({required: true})}
+                        type='text'
+                        name='zip'
+                        value={newEmployee.zip}
+                        placeholder="Zip Code"
+                        onChange={handleChange} />
+                        {errors.zip && errors.zip.type === "required" && (<div className="error">You must enter your Zip Code.</div>)}
+                    </div>
+
+                    <div className= "form-input">
+                        <input
+                        ref={register}
+                        type='text'
+                        name='photo'
+                        value={newEmployee.photo}
+                        placeholder="link tp profile photo"
+                        onChange={handleChange} />
+                    </div>
+
+                    <div className= "form-input">
+                        <textarea
+                        ref={register}
+                        name='notes'
+                        value={newEmployee.notes}
+                        placeholder="Notes"
+                        onChange={handleChange} />
+                    </div> 
+                    
+                    <button>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Add Employee
+                    </button>
+                </form>
+
+        </div>
     </div>
     )
 }
