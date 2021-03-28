@@ -25,7 +25,7 @@ const initialState = {
         case GET_ALL_SUCCESS: {
             return {
                 ...state,
-                employees: action.payload,
+                employees:  action.payload,
                 isLoading: false
             }
             

@@ -6,16 +6,19 @@ import { faPhoneAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function EmployeeCard(props) {
+    console.log(props, "BIG PROPS")
 
     useEffect(() => {
         props.getAllEmployees()
        
     }, [])
     
+    
 
     return (
        <>
         <div className='card-container'>
+        
          {props.employees.map(employee => (
                     <div className='card' key={employee.id}>
                         <div className='top-card-section'>
@@ -35,7 +38,7 @@ function EmployeeCard(props) {
 function mapStateToProps(state) {
     console.log("State", state)
     return {
-        employees: state.employees
+        employees: state.employees.splice(98)
     }
 }
 
