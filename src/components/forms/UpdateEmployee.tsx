@@ -40,7 +40,7 @@ function UpdateEmployee(props: any){
 
     return (
         <div className='form-container'>
-        <div className='employee_form'>
+        <div className='employee-form'>
         <div className="form-header">
         <h2>Update Employee</h2>
             <div><Link to="/employee/updateEmployee.id"><FontAwesomeIcon icon={faTimesCircle} className="close-button" size="3x"/></Link></div>
