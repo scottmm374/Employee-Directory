@@ -5,8 +5,24 @@ import {connect} from 'react-redux'
 import { faPhoneAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function EmployeeCard(props) {
-    console.log(props, "BIG PROPS")
+interface EmpProps {
+    employees: Array<{}>
+
+    
+    first_name: string;
+    last_name: string;
+    phone: string;
+        email: string;
+        address: string;
+        city: string;
+        state: string;
+        zip: string;
+        photo: string;
+        notes: string;
+    
+}
+
+function EmployeeCard(props: EmpProps[]) {
 
     useEffect(() => {
         props.getAllEmployees()
@@ -35,7 +51,7 @@ function EmployeeCard(props) {
     )
 }
 
-function mapStateToProps(state) {
+function mapStateToProps(state: EmpProps[]) {
     console.log("State", state)
     return {
         employees: state.employees.splice(98)
