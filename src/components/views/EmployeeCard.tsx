@@ -1,41 +1,32 @@
 import  {useEffect} from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import {Link} from 'react-router-dom'
-import {getAllEmployees} from '../../redux/actions'
-import {connect} from 'react-redux'
+import {getAllEmployees} from '../../redux/effects/Employees'
+import {Employee} from '../../redux/interfaces/Employee'
 import { faPhoneAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {AppState} from '../../redux/store/index'
 
-interface EmpProps {
-    employees: Array<{}>
 
-    
-    first_name: string;
-    last_name: string;
-    phone: string;
-        email: string;
-        address: string;
-        city: string;
-        state: string;
-        zip: string;
-        photo: string;
-        notes: string;
-    
-}
+export default function EmployeeCard() : JSX.Element{
 
-function EmployeeCard(props: EmpProps[]) {
+    const dispatch = useDispatch()
 
     useEffect(() => {
-        props.getAllEmployees()
+       dispatch(getAllEmployees())
        
-    }, [])
+    }, [dispatch])
     
-    
+    const employees = useSelector((state: AppState) => state.employees)
+   
+
+  
 
     return (
        <>
         <div className='card-container'>
         
-         {props.employees.map(employee => (
+         {employees.employees.map((employee: Employee) => (
                     <div className='card' key={employee.id}>
                         <div className='top-card-section'>
                         <div><img className="card-img" src={`${employee.photo}`} alt={employee.first_name}/></div>
@@ -51,11 +42,11 @@ function EmployeeCard(props: EmpProps[]) {
     )
 }
 
-function mapStateToProps(state: EmpProps[]) {
-    console.log("State", state)
-    return {
-        employees: state.employees.splice(98)
-    }
-}
+// function mapStateToProps(state: EmpProps[]) {
+//     console.log("State", state)
+//     return {
+//         employees: state.employees.splice(98)
+//     }
+// }
 
-export default connect(mapStateToProps, {getAllEmployees})(EmployeeCard);
+// export default connect(mapStateToProps, {getAllEmployees})(EmployeeCard);
