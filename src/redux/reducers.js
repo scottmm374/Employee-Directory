@@ -1,4 +1,3 @@
-// import { isReturnStatement } from "typescript"
 
 import {GET_ALL_SUCCESS, GET_ALL_PENDING, GET_ALL_ERROR,ADD_NEW_PENDING,ADD_NEW_SUCCESS,
     ADD_NEW_ERROR, GET_EMPLOYEE_PENDING, GET_EMPLOYEE_SUCCESS, GET_EMPLOYEE_ERROR, UPDATE_PENDING, UPDATE_SUCCESS, UPDATE_ERROR} from './actions'
@@ -13,7 +12,7 @@ const initialState = {
     currentEmployee:[]
 }
 
- export function rootReducer(state = initialState, action){
+ export default function rootReducer(state = initialState, action){
     switch(action.type) {
         case GET_ALL_PENDING: {
             return {
