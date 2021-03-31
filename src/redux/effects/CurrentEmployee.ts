@@ -1,11 +1,11 @@
-import { getSingleEmpAction} from '../actions/SingleEmpActions';
+import { getCurrentEmployeeAction} from '../actions/CurrentEmployeeActions';
 import { Dispatch } from 'redux';
 import axios from 'axios'
-import { SingleEmpActionTypes } from '../types/SingleEmpTypes';
+import { CurrentEmployeeActionTypes } from '../types/CurrentEmployeeTypes';
 
 
 export const getEmpById = (id:any) => {
-  return function (dispatch: Dispatch<SingleEmpActionTypes>) {
+  return function (dispatch: Dispatch<CurrentEmployeeActionTypes>) {
     axios
         .get(`https://codechallenge.rivet.work/api/v1/profile/${id}`, {
             headers: {
@@ -14,7 +14,7 @@ export const getEmpById = (id:any) => {
         })
       .then(res => {
         console.log(res.data, "before" )
-        dispatch(getSingleEmpAction(res.data));
+        dispatch(getCurrentEmployeeAction(res.data));
       }).catch(err => {
           console.log(err)
       })

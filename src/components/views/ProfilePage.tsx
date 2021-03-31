@@ -1,11 +1,12 @@
 import React, { useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import {getEmpById} from '../../redux/effects/SingleEmp'
-import {SingleEmp} from '../../redux/interfaces/SingleEmp'
+import {getEmpById} from '../../redux/effects/CurrentEmployee'
+import {CurrentEmployee} from '../../redux/interfaces/CurrentEmployee'
 import {Link} from 'react-router-dom'
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {AppState} from '../../redux/store/index'
+import { CurrentEmployee } from '../../redux/interfaces/CurrentEmployee';
 
 
 export default function ProfilePage(props: any): JSX.Element {
@@ -18,7 +19,7 @@ export default function ProfilePage(props: any): JSX.Element {
       
     },[dispatch, id])
 
-    const employee = useSelector((state: AppState) => state.singleEmp)
+    const employee: CurrentEmployee = useSelector((state: AppState) => state.currentEmployee, {}) 
     console.log(employee, "single")
    
     
