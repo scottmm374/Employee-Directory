@@ -107,7 +107,8 @@ section {
 }
 body {
   line-height: 1;
-  background: #021b2b;
+  /* background: #021b2b; */
+  background-color: black;
 }
 ol,
 ul {
