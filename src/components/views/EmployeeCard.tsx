@@ -1,32 +1,25 @@
 import  {useEffect} from 'react'
-import { useDispatch, useSelector } from 'react-redux';
 import {Link} from 'react-router-dom'
-import {getAllEmployees} from '../../redux/effects/Employees'
-import {Employee} from '../../redux/interfaces/Employee'
+import {getAllEmployees} from '../../redux/actions'
+import {connect} from 'react-redux'
 import { faPhoneAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {AppState} from '../../redux/store/index'
 
-
-export default function EmployeeCard() : JSX.Element{
-
-    const dispatch = useDispatch()
+function EmployeeCard(props: any) {
+    console.log(props, "BIG PROPS")
 
     useEffect(() => {
-       dispatch(getAllEmployees())
+        props.getAllEmployees()
        
-    }, [dispatch])
+    }, [])
     
-    const employees = useSelector((state: AppState) => state.employees)
-   
-
-  
+    
 
     return (
        <>
         <div className='card-container'>
         
-         {employees.employees.map((employee: Employee) => (
+         {props.employees.map(employee => (
                     <div className='card' key={employee.id}>
                         <div className='top-card-section'>
                         <div><img className="card-img" src={`${employee.photo}`} alt={employee.first_name}/></div>
@@ -42,11 +35,11 @@ export default function EmployeeCard() : JSX.Element{
     )
 }
 
-// function mapStateToProps(state: EmpProps[]) {
-//     console.log("State", state)
-//     return {
-//         employees: state.employees.splice(98)
-//     }
-// }
+function mapStateToProps(state: any) {
+    console.log("State", state)
+    return {
+        employees: state.employees
+    }
+}
 
-// export default connect(mapStateToProps, {getAllEmployees})(EmployeeCard);
+export default connect(mapStateToProps, {getAllEmployees})(EmployeeCard);

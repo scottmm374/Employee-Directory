@@ -6,7 +6,7 @@ import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
-const ProfilePage = (props) => {
+const ProfilePage = (props: any) => {
     const {id} = props.match.params
 
        useEffect(() => {
@@ -40,6 +40,7 @@ const ProfilePage = (props) => {
                         <div><h4>Street Address: </h4>{props.employee.address}</div>
                         <div><h4>City :</h4>{props.employee.city}</div> 
                         <div><h4>State:</h4>{props.employee.state}</div>
+                        <div><h4>Zip Code:</h4>{props.employee.zip}</div>
                     </div>
                         
                     <div className="notes"><h4>Notes</h4><br/><br/>{props.employee.notes}</div>
@@ -51,7 +52,7 @@ const ProfilePage = (props) => {
     )
 }
 
-function mapStateToProps(state) {
+function mapStateToProps(state: any) {
     console.log("State", state)
     return {
         employee: state.currentEmployee
