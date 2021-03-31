@@ -19,7 +19,7 @@ export default function EmployeeCard() : JSX.Element{
     
     const employees = useSelector((state: AppState) => state.employees)
    
-
+    console.log(" EMployees in dash", employees)
   
 
     return (

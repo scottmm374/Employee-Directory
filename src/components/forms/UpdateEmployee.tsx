@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import {update, getEmpById} from '../../redux/actions'
+import { update} from '../../redux/actions'
 import {useHistory} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
@@ -169,4 +169,4 @@ function mapStateToProps(state: any) {
     }
 }
 
-export default connect(mapStateToProps, {update, getEmpById})(UpdateEmployee);
+export default connect(mapStateToProps, {update})(UpdateEmployee);

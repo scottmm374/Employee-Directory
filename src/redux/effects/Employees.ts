@@ -13,6 +13,7 @@ export const getAllEmployees = () => {
             }
         })
       .then(res => {
+        console.log(res.data, "employee action")
         dispatch(getEmployeeAction(res.data));
         // return res;
       }).catch(err => {

@@ -1,5 +1,5 @@
 import EmployeeCard from './EmployeeCard'
-import Header from '../../ui_elements/Header.js'
+import Header from '../../ui_elements/Header'
 
 
 const  EmployeeDashboard = () =>{
