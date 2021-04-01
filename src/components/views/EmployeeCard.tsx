@@ -24,6 +24,7 @@ function EmployeeCard(props: any) {
                         <div className='top-card-section'>
                         <div><img className="card-img" src={`${employee.photo}`} alt={employee.first_name}/></div>
                         <div className="name-card"><h4 className="first-name-card">{employee.first_name}</h4> <h4 className="last-name-card">{employee.last_name}</h4> </div>
+                       
                         <div className='icons-card'><div className="card-icons" ><FontAwesomeIcon icon={faPhoneAlt} /></div><div className="card-icons"><FontAwesomeIcon icon={faEnvelope} /></div></div>
                         </div>
                         <Link to={`/employee/${employee.id}`}><button className="view-profile-button">View</button></Link>
