@@ -19,6 +19,7 @@ export default function ProfilePage(props:any): JSX.Element {
     },[])
 
     return (
+        
         <div className="profile-page">
             <div className="header-profile">
                 <h1>{currentEmployee.first_name}</h1>

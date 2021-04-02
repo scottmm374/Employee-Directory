@@ -18,7 +18,7 @@ export interface EmployeesState {
  const initialState: EmployeesState = {
     isLoading: false,
     isAddNew: false,
-    errors: '',
+    errors: 'What did you do!!! :)',
     employees: [],
     
 }
