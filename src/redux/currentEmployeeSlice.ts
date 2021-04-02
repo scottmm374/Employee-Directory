@@ -15,7 +15,7 @@ export interface CurrentEmployeeState {
 
  const initialState: CurrentEmployeeState = {
     isLoading: false,
-    errors: 'You Caused an Error!!!',
+    errors: '',
     currentEmployee: []
 }
 

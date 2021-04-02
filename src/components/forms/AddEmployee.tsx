@@ -1,10 +1,12 @@
 import {useState} from 'react'
-import {addEmployee} from '../../redux/actions'
-import {connect} from 'react-redux'
+// import {addEmployee} from '../../redux/actions'
+// import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {useForm} from 'react-hook-form'
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useDispatch } from 'react-redux';
+import {addNewEmployee} from '../../redux/employeesSlice'
 
 interface Inputs {
     first_name: string,
@@ -20,7 +22,8 @@ interface Inputs {
 }
 
 
-function AddEmployee(props: any){
+export default function AddEmployee(props: any): JSX.Element{
+    const dispatch = useDispatch()
     const {register, handleSubmit, errors} = useForm<Inputs>()
     const [newEmployee, setNewEmployee] = useState({
         first_name: "",
@@ -42,7 +45,7 @@ function AddEmployee(props: any){
     }
 
     const onSubmit = (data: Inputs) => {
-        props.addEmployee(newEmployee)
+        dispatch(addNewEmployee(newEmployee))
         props.history.push('/')
         
     }
@@ -177,10 +180,10 @@ function AddEmployee(props: any){
     )
 }
 
-function mapStateToProps(state: any) {
-    return {
-        error: state.error     
-    }
-}
+// function mapStateToProps(state: any) {
+//     return {
+//         error: state.error     
+//     }
+// }
 
-export default connect(mapStateToProps, {addEmployee})(AddEmployee);
+// export default connect(mapStateToProps, {addEmployee})(AddEmployee);

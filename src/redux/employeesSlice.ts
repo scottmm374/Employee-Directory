@@ -7,6 +7,7 @@ import { AppThunk } from '../index'
 
 export interface EmployeesState {
     isLoading: boolean;
+    isAddNew:boolean;
     errors: string;
     employees : any;
     
@@ -16,7 +17,8 @@ export interface EmployeesState {
 
  const initialState: EmployeesState = {
     isLoading: false,
-    errors: 'You Caused an Error!!!',
+    isAddNew: false,
+    errors: '',
     employees: [],
     
 }
@@ -32,9 +34,17 @@ export interface EmployeesState {
             state.employees = payload
             
         },
-        // setErrors: (state, {payload}: PayloadAction<string>) => {
-        //     state.errors: payload
-        // },
+        setIsAddNew: (state, {payload}: PayloadAction<boolean>) => {
+            state.isAddNew = payload       
+         },
+
+         setAddEmployee: (state, {payload}: PayloadAction<{}>) =>{
+             state.employees = payload
+         },
+
+        setErrors: (state, {payload}: PayloadAction<string>) => {
+            state.errors =  payload
+        },
     }
 
 
@@ -42,7 +52,7 @@ export interface EmployeesState {
 
 
 
-export const {setLoading, setEmployees} = employeesSlice.actions
+export const {setLoading, setEmployees, setIsAddNew, setAddEmployee , setErrors} = employeesSlice.actions
 export default employeesSlice.reducer
 export const employeesSelector = (state: {employeesStore: EmployeesState}) => state.employeesStore
 
@@ -51,7 +61,6 @@ export const getAllEmployees = (): AppThunk => {
       dispatch(setLoading(true))
       try {
         
-  
         const res = await axios.get('https://codechallenge.rivet.work/api/v1/profiles', {
             headers: {
                 'token': 'XA8K6b8GSM5mGNN2v5Q3j6xUUwpkoPSx3zdxbAADwtzuHrexRHWi58rHZkRZJhf7'
@@ -60,12 +69,30 @@ export const getAllEmployees = (): AppThunk => {
         dispatch(setLoading(false))
         dispatch(setEmployees(res.data))
       } catch (error) {
-        console.log(error)
+        dispatch(setErrors(error.message))
         dispatch(setLoading(false))
       }
     }
   }
   
+  export const addNewEmployee = (newEmployee:any): AppThunk => {
+    return async dispatch => {
+      dispatch(setIsAddNew(true))
+      try {
+        
+        const res = await axios.post('https://codechallenge.rivet.work/api/v1/profiles', {
+            headers: {
+                'token': 'XA8K6b8GSM5mGNN2v5Q3j6xUUwpkoPSx3zdxbAADwtzuHrexRHWi58rHZkRZJhf7'
+            }
+        })
+        dispatch(setIsAddNew(false))
+        dispatch(setAddEmployee(res.data))
+      } catch (error) {
+        console.log(error)
+        dispatch(setLoading(false))
+      }
+    }
+  }
     
 
     
