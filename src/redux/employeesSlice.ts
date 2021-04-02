@@ -39,7 +39,7 @@ export interface EmployeesState {
          },
 
          setAddEmployee: (state, {payload}: PayloadAction<{}>) =>{
-             state.employees = payload
+             state.employees.push(payload)
          },
 
         setErrors: (state, {payload}: PayloadAction<string>) => {
@@ -76,17 +76,21 @@ export const getAllEmployees = (): AppThunk => {
   }
   
   export const addNewEmployee = (newEmployee:any): AppThunk => {
-    return async dispatch => {
+    return  dispatch => {
       dispatch(setIsAddNew(true))
       try {
         
-        const res = await axios.post('https://codechallenge.rivet.work/api/v1/profiles', {
+         axios.post('https://codechallenge.rivet.work/api/v1/profile', newEmployee ,{
             headers: {
                 'token': 'XA8K6b8GSM5mGNN2v5Q3j6xUUwpkoPSx3zdxbAADwtzuHrexRHWi58rHZkRZJhf7'
             }
+        }).then(res => {
+          console.log(res.data, "add emp reducer")
+          dispatch(setIsAddNew(false))
+          dispatch(setAddEmployee(res.data))
+
         })
-        dispatch(setIsAddNew(false))
-        dispatch(setAddEmployee(res.data))
+        
       } catch (error) {
         console.log(error)
         dispatch(setLoading(false))

@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function EmployeeCard(): JSX.Element {
     const dispatch = useDispatch()
     const {employees} = useSelector(employeesSelector)
-   console.log(employees)
+   console.log(employees, "Employees cards")
 
     useEffect(() => {
         dispatch(getAllEmployees())
@@ -39,12 +39,3 @@ export default function EmployeeCard(): JSX.Element {
        </>
     )
 }
-
-// function mapStateToProps(state: any) {
-//     console.log("State", state)
-//     return {
-//         employees: state.employees
-//     }
-// }
-
-// export default connect(mapStateToProps, {getAllEmployees})(EmployeeCard);

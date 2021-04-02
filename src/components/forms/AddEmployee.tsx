@@ -179,11 +179,3 @@ export default function AddEmployee(props: any): JSX.Element{
     </div>
     )
 }
-
-// function mapStateToProps(state: any) {
-//     return {
-//         error: state.error     
-//     }
-// }
-
-// export default connect(mapStateToProps, {addEmployee})(AddEmployee);

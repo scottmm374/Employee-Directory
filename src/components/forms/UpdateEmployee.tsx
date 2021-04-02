@@ -1,13 +1,11 @@
-import {useState, useEffect} from 'react'
-import { update, getById, currentEmployeeSelector} from '../../redux/currentEmployeeSlice'
+import {useState} from 'react'
+import { update} from '../../redux/actions'
 import {useHistory} from 'react-router-dom'
-import { useSelector, useDispatch } from 'react-redux';
-// import {connect} from 'react-redux'
+import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {useForm} from 'react-hook-form'
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { current } from 'immer';
 
 
 interface Inputs {
@@ -19,35 +17,14 @@ interface Inputs {
         city: string,
         state: string,
         zip: string,
-        photo?: string | null | undefined,
-        notes?: string | null | undefined,
+        photo: string,
+        notes: string,
 }
 
-export default function UpdateEmployee(props: any): JSX.Element{
-    const {id} = props.match.params
-    const {currentEmployee} = useSelector(currentEmployeeSelector)
-    console.log(props, "PROPS")
-    const dispatch = useDispatch()
+function UpdateEmployee(props: any){
     const {register, handleSubmit, errors} = useForm<Inputs>()
-    const [updateEmployee, setUpdateEmployee] = useState(
-        {first_name: currentEmployee.first_name,
-             last_name: currentEmployee.last_name,
-              phone: currentEmployee.phone,
-               email: currentEmployee.email,
-                address: currentEmployee.address,
-                city: currentEmployee.city,
-                state: currentEmployee.state,
-                zip: currentEmployee.zip,
-                photo: currentEmployee.photo,
-                notes: currentEmployee.notes
-            })
-    
+    const [updateEmployee, setUpdateEmployee] = useState(props.currentEmployee)
     const history = useHistory()
-
-    useEffect(() => {
-        dispatch(getById(id))
-      
-    },[id])
    
 
     const handleChange = (event: any) => {
@@ -56,7 +33,7 @@ export default function UpdateEmployee(props: any): JSX.Element{
     }
 
     const onSubmit = (data: Inputs) => {
-        dispatch(update(id, updateEmployee))
+        props.update(props.currentEmployee.id, updateEmployee)
         history.push('/employee/updateEmployee.id')
     }
     
@@ -185,11 +162,11 @@ export default function UpdateEmployee(props: any): JSX.Element{
 
 }
 
-// function mapStateToProps(state: any) {
-//     return {
-//         error: state.error,
-//         currentEmployee: state.currentEmployee   
-//     }
-// }
+function mapStateToProps(state: any) {
+    return {
+        error: state.error,
+        currentEmployee: state.currentEmployee   
+    }
+}
 
-// export default connect(mapStateToProps, {update})(UpdateEmployee);
+export default connect(mapStateToProps, {update})(UpdateEmployee);

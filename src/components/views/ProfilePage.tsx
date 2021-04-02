@@ -19,7 +19,6 @@ export default function ProfilePage(props:any): JSX.Element {
     },[])
 
     return (
-        
         <div className="profile-page">
             <div className="header-profile">
                 <h1>{currentEmployee.first_name}</h1>
@@ -56,12 +55,3 @@ export default function ProfilePage(props:any): JSX.Element {
         </div>
     )
 }
-
-// function mapStateToProps(state: any) {
-//     console.log("State", state)
-//     return {
-//         employee: state.currentEmployee
-//     }
-// }
-
-// export default connect(mapStateToProps, {getEmpById})(ProfilePage);
