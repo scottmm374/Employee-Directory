@@ -5,31 +5,29 @@ import { AppThunk } from '../index'
 // import { RootState } from '../app/rootReducer'
 
 
-export interface EmployeesState {
+export interface CurrentEmployeeState {
     isLoading: boolean;
     errors: string;
-    employees : any;
-    
+    currentEmployee: any;
 }
 
 
 
- const initialState: EmployeesState = {
+ const initialState: CurrentEmployeeState = {
     isLoading: false,
     errors: 'You Caused an Error!!!',
-    employees: [],
-    
+    currentEmployee: []
 }
 
- const employeesSlice = createSlice ({
-    name: "employees",
+const currentEmployeeSlice = createSlice ({
+    name: "currentEmployee",
     initialState,
     reducers: {
         setLoading: (state, {payload}: PayloadAction<boolean>) => {
             state.isLoading = payload
         },
-        setEmployees: (state, { payload }: PayloadAction<[]>) => {
-            state.employees = payload
+        setCurrentEmployee: (state, { payload }: PayloadAction<[]>) => {
+            state.currentEmployee = payload
             
         },
         // setErrors: (state, {payload}: PayloadAction<string>) => {
@@ -40,25 +38,23 @@ export interface EmployeesState {
 
 })
 
+export const {setLoading, setCurrentEmployee} = currentEmployeeSlice.actions
+export default currentEmployeeSlice.reducer
+export const currentEmployeeSelector = (state: {currentEmployeeStore: CurrentEmployeeState}) => state.currentEmployeeStore
 
-
-export const {setLoading, setEmployees} = employeesSlice.actions
-export default employeesSlice.reducer
-export const employeesSelector = (state: {employeesStore: EmployeesState}) => state.employeesStore
-
-export const getAllEmployees = (): AppThunk => {
+export const getById = (id:number | string): AppThunk => {
     return async dispatch => {
       dispatch(setLoading(true))
       try {
         
   
-        const res = await axios.get('https://codechallenge.rivet.work/api/v1/profiles', {
+        const res = await axios.get(`https://codechallenge.rivet.work/api/v1/profile/${id}`, {
             headers: {
                 'token': 'XA8K6b8GSM5mGNN2v5Q3j6xUUwpkoPSx3zdxbAADwtzuHrexRHWi58rHZkRZJhf7'
             }
         })
         dispatch(setLoading(false))
-        dispatch(setEmployees(res.data))
+        dispatch(setCurrentEmployee(res.data))
       } catch (error) {
         console.log(error)
         dispatch(setLoading(false))
@@ -66,6 +62,4 @@ export const getAllEmployees = (): AppThunk => {
     }
   }
   
-    
-
     

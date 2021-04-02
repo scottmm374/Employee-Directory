@@ -6,11 +6,12 @@ import {configureStore, Action} from '@reduxjs/toolkit'
 import {Provider} from 'react-redux';
 import {ThunkAction} from 'redux-thunk'
 import employeesSliceReducer, {EmployeesState} from './redux/employeesSlice'
+import currentEmployeeSliceReducer, {CurrentEmployeeState} from './redux/currentEmployeeSlice'
 // import rootReducer from './redux/reducers'
 import {BrowserRouter as Router} from 'react-router-dom'
 
-export type AppThunk = ThunkAction<void, EmployeesState, unknown, Action<string>>;
-const store = configureStore({reducer:{employeesStore: employeesSliceReducer, }});
+export type AppThunk = ThunkAction<void, EmployeesState, CurrentEmployeeState, Action<string>>;
+const store = configureStore({reducer:{employeesStore: employeesSliceReducer, currentEmployeeStore: currentEmployeeSliceReducer}});
 
 ReactDOM.render(
   <React.StrictMode>
