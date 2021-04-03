@@ -36,8 +36,8 @@ Rivet has developed a RESTful API for it's employee directory. You will create a
 
 
 ### Would like to add TECH:
-- [ ] Redux *Toolkit*
-- [ ] More Typescript checking
+- [x] Redux *Toolkit*
+- [x] More Typescript checking
 - [ ] Styling Library (Reactstrap-boostrap, MaterialUI)
 - [ ] Testing (Jest)
 

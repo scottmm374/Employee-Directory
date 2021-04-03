@@ -14,7 +14,7 @@ export default function ProfilePage(props:any): JSX.Element {
        useEffect(() => {
         dispatch(getById(id))
       
-    },[dispatch])
+    },[dispatch, id])
 
     return (
         <div className="profile-page">

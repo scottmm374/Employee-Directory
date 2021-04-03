@@ -1,6 +1,4 @@
 import {useState} from 'react'
-// import {addEmployee} from '../../redux/actions'
-// import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {useForm} from 'react-hook-form'
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";

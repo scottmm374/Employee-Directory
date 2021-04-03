@@ -1,16 +1,14 @@
-import  React, {useEffect} from 'react'
+import {useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import { employeesSelector, getAllEmployees } from "../../redux/employeesSlice"
 import { useSelector, useDispatch } from "react-redux"
-// import {getAllEmployees} from '../../redux/actions'
-// import {connect} from 'react-redux'
 import { faPhoneAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function EmployeeCard(): JSX.Element {
     const dispatch = useDispatch()
     const {employees} = useSelector(employeesSelector)
-   console.log(employees, "Employees cards")
+//    console.log(employees, "Employees cards")
 
     useEffect(() => {
         dispatch(getAllEmployees())

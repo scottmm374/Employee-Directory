@@ -1,13 +1,11 @@
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import { update, getById, currentEmployeeSelector} from '../../redux/currentEmployeeSlice'
 import {useHistory} from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux';
-// import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {useForm} from 'react-hook-form'
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { current } from 'immer';
 
 
 interface Inputs {
@@ -24,34 +22,22 @@ interface Inputs {
         notes?: string | null | undefined,
 }
 
+
+// can prob simplify this to arrow func
 export default function UpdateEmployee(props: any): JSX.Element{
-    const {id} = props.match.params
+    // const {id} = props.match.params  ! Dont think I need this but need to double check
+
     const {currentEmployee} = useSelector(currentEmployeeSelector)
-    // const { first_name, last_name, phone, email, address, city, state, zip, photo, notes} = currentEmployee
-    // console.log(currentEmployee, "Deconstructed currentEmployee")
     const dispatch = useDispatch()
     const {register, handleSubmit, errors} = useForm<Inputs>()
     const [updateEmployee, setUpdateEmployee] = useState(currentEmployee)
-        // {first_name: first_name,
-        //      last_name: last_name,
-        //       phone: phone,
-        //        email: email,
-        //         address: address,
-        //         city: city,
-        //         state: state,
-        //         zip: zip,
-        //         photo: photo,
-        //         notes: notes
-        //     })
+        
 
-            console.log("Update Employee", updateEmployee);
+    console.log("Update Employee", updateEmployee);
     
     const history = useHistory()
 
-    // useEffect(() => {
-    //     dispatch(getById(id))
-      
-    // },[])
+    
    
 
     const handleChange = (event: any) => {
