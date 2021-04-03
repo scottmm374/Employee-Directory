@@ -1,14 +1,17 @@
-import {useState} from 'react'
-import { update} from '../../redux/actions'
+import {useState, useEffect} from 'react'
+import { update, getById, currentEmployeeSelector} from '../../redux/currentEmployeeSlice'
 import {useHistory} from 'react-router-dom'
-import {connect} from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux';
+// import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {useForm} from 'react-hook-form'
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { current } from 'immer';
 
 
 interface Inputs {
+    id:number | string,
     first_name: string,
         last_name: string,
         phone: string,
@@ -17,24 +20,48 @@ interface Inputs {
         city: string,
         state: string,
         zip: string,
-        photo: string,
-        notes: string,
+        photo?: string | null | undefined,
+        notes?: string | null | undefined,
 }
 
-function UpdateEmployee(props: any){
+export default function UpdateEmployee(props: any): JSX.Element{
+    const {id} = props.match.params
+    const {currentEmployee} = useSelector(currentEmployeeSelector)
+    // const { first_name, last_name, phone, email, address, city, state, zip, photo, notes} = currentEmployee
+    // console.log(currentEmployee, "Deconstructed currentEmployee")
+    const dispatch = useDispatch()
     const {register, handleSubmit, errors} = useForm<Inputs>()
-    const [updateEmployee, setUpdateEmployee] = useState(props.currentEmployee)
+    const [updateEmployee, setUpdateEmployee] = useState(currentEmployee)
+        // {first_name: first_name,
+        //      last_name: last_name,
+        //       phone: phone,
+        //        email: email,
+        //         address: address,
+        //         city: city,
+        //         state: state,
+        //         zip: zip,
+        //         photo: photo,
+        //         notes: notes
+        //     })
+
+            console.log("Update Employee", updateEmployee);
+    
     const history = useHistory()
+
+    // useEffect(() => {
+    //     dispatch(getById(id))
+      
+    // },[])
    
 
     const handleChange = (event: any) => {
-        event.preventDefault()
+        // event.preventDefault()
         setUpdateEmployee({...updateEmployee, [event.target.name]: event.target.value})
     }
 
     const onSubmit = (data: Inputs) => {
-        props.update(props.currentEmployee.id, updateEmployee)
-        history.push('/employee/updateEmployee.id')
+        dispatch(update(currentEmployee.id, updateEmployee))
+        history.push(`/employee/${currentEmployee.id}`)
     }
     
 
@@ -43,7 +70,7 @@ function UpdateEmployee(props: any){
         <div className='employee-form'>
         <div className="form-header">
         <h2>Update Employee</h2>
-            <div><Link to="/employee/updateEmployee.id"><FontAwesomeIcon icon={faTimesCircle} className="close-button" size="3x"/></Link></div>
+            <div><Link to={`/employee/${currentEmployee.id}`}><FontAwesomeIcon icon={faTimesCircle} className="close-button" size="3x"/></Link></div>
             
             
             </div>
@@ -161,12 +188,3 @@ function UpdateEmployee(props: any){
     )
 
 }
-
-function mapStateToProps(state: any) {
-    return {
-        error: state.error,
-        currentEmployee: state.currentEmployee   
-    }
-}
-
-export default connect(mapStateToProps, {update})(UpdateEmployee);

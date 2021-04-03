@@ -1,8 +1,6 @@
-import React, { useEffect} from 'react'
+import { useEffect} from 'react'
 import {currentEmployeeSelector, getById} from "../../redux/currentEmployeeSlice"
 import { useSelector, useDispatch } from "react-redux"
-// import {connect} from 'react-redux'
-// import {getEmpById} from '../../redux/actions'
 import {Link} from 'react-router-dom'
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,7 +14,7 @@ export default function ProfilePage(props:any): JSX.Element {
        useEffect(() => {
         dispatch(getById(id))
       
-    },[])
+    },[dispatch])
 
     return (
         <div className="profile-page">
