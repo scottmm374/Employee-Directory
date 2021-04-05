@@ -78,47 +78,47 @@ export const getById = (id:number | string): AppThunk => {
 
   
   
-  export const update = (id:number | string, updateEmployee:any): AppThunk => {
-    console.log("Update param in update",updateEmployee)
-     return async dispatch => {
-      dispatch(setIsUpdating(true))
-      try {
-        const res = await axios.put(`https://codechallenge.rivet.work/api/v1/profile/${id}`, updateEmployee, {
-            headers: {
-                'token': 'XA8K6b8GSM5mGNN2v5Q3j6xUUwpkoPSx3zdxbAADwtzuHrexRHWi58rHZkRZJhf7'
-            }
-        })
-            console.log(res.data, "Update")
-            dispatch(setUpdate(res.data))
-            dispatch(setIsUpdating(false))
-          
-
-        } catch (error) {
-        console.log(error)
-        dispatch(setLoading(false))
-      }
-    }
-  }
-  
-    
-  // export function update(id:number | string, updateEmployee:any) {
+  // export const update = (id:number | string, updateEmployee:any): AppThunk => {
   //   console.log("Update param in update",updateEmployee)
-  //    return dispatch => {
+  //    return async dispatch => {
   //     dispatch(setIsUpdating(true))
-  //       axios.put(`https://codechallenge.rivet.work/api/v1/profile/${id}`, updateEmployee, {
+  //     try {
+  //       const res = await axios.put(`https://codechallenge.rivet.work/api/v1/profile/${id}`, updateEmployee, {
   //           headers: {
   //               'token': 'XA8K6b8GSM5mGNN2v5Q3j6xUUwpkoPSx3zdxbAADwtzuHrexRHWi58rHZkRZJhf7'
   //           }
-  //       }).then(res => {
+  //       })
   //           console.log(res.data, "Update")
   //           dispatch(setUpdate(res.data))
   //           dispatch(setIsUpdating(false))
           
 
-  //       }).catch (error => {
+  //       } catch (error) {
   //       console.log(error)
   //       dispatch(setLoading(false))
-  //     })
+  //     }
   //   }
   // }
+  
+    
+  export function update(id:number | string, updateEmployee:any) {
+    console.log("Update param in update",updateEmployee)
+     return dispatch => {
+      dispatch(setIsUpdating(true))
+        axios.put(`https://codechallenge.rivet.work/api/v1/profile/${id}`, updateEmployee, {
+            headers: {
+                'token': 'XA8K6b8GSM5mGNN2v5Q3j6xUUwpkoPSx3zdxbAADwtzuHrexRHWi58rHZkRZJhf7'
+            }
+        }).then(res => {
+            console.log(res.data, "Update")
+            dispatch(setUpdate(res.data))
+            dispatch(setIsUpdating(false))
+          
+
+        }).catch (error => {
+        console.log(error)
+        dispatch(setLoading(false))
+      })
+    }
+  }
   

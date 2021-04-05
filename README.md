@@ -63,9 +63,7 @@ Rivet has developed a RESTful API for it's employee directory. You will create a
 - [ ] ProfilePage section showing calander and scheduled days off, showing vacation days used/left, ect
 
 
-## Notes
 
-    Normally I would use a .env file to hide the token and I would also add a custom API variable so that the code in the requests are not so verbose. 
 
     
   
