@@ -66,12 +66,13 @@ export const getAllEmployees = (): AppThunk => {
                 'token': 'XA8K6b8GSM5mGNN2v5Q3j6xUUwpkoPSx3zdxbAADwtzuHrexRHWi58rHZkRZJhf7'
             }
         }).then(res => {
-          dispatch(setLoading(false))
           dispatch(setEmployees(res.data))
-          dispatch(setLoading(false))
+          
+        }).then(() => {
+            dispatch(setLoading(false))
 
-        }).catch (error => {
-        dispatch(setErrors(error.message))
+          }).catch (error => {
+          dispatch(setErrors(error.message))
         
       })
     }
