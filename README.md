@@ -43,10 +43,6 @@ Rivet has developed a RESTful API for it's employee directory. You will create a
 
 -----------
 
-## Features I would add in the future:
-
-- [ ] Login Landing page
-- [ ] More custom graphics
 
 #### Main Dashboard
 - [ ] Search function
