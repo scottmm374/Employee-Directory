@@ -1,8 +1,16 @@
+/* TODO:  
+    ~ Forms re-styling
+    ~ Profile Page fixes
+    */
+
+
 .App {
   text-align: center;
   font-family: "Roboto", sans-serif;
   background-image: linear-gradient(to left, #0d0b0c, #1e1920, #252736, #21384b, #0f4b5b, #0a4c57, #0c4d52, #124e4d, #153e3e, #162f2f, #142020, #0f1212);
 }
+
+/* FIXME: Font too small, and clean up code thats redundant */
 
 .sideways-title {
   writing-mode: vertical-rl;
@@ -107,7 +115,7 @@
   border: 2px solid #10ece5;
 }
 
-.card button {
+/* .card button {
   background-color: #0f1724;
   border: #10ece5 3px;
   position: relative;
@@ -130,7 +138,7 @@
   color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 5px #f05237, 0 0 25px #f05237, 0 0 50px #f05237, 0 0 100px #f05237;
-}
+} */
 .name-card {
    display: flex;
   justify-content: space-between; 
@@ -206,7 +214,7 @@
   font-size: 12px;
 }
 .add-employee-button,
-.employee-form form button {
+.employee-form form button, .edit-button  {
   background-color: #032032;
   border: #032032 1px;
   position: relative;
@@ -223,7 +231,8 @@
 }
 
 .add-employee-button:hover,
-.employee-form button:hover {
+.employee-form button:hover,
+.edit-button button:hover {
   background: #f9a54b;
   border-radius: 5px;
   color: #ffffff;
@@ -231,13 +240,15 @@
 }
 
 .add-employee-button span,
-.employee-form button span {
+.employee-form button span,
+.edit-button button span {
   position: absolute;
   display: block;
 }
 
 .add-employee-button span:nth-child(1),
-.employee-form button span:nth-child(1) {
+.employee-form button span:nth-child(1),
+.edit-button button span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -257,7 +268,8 @@
 }
 
 .add-employee-button span:nth-child(2),
-.employee-form button span:nth-child(2) {
+.employee-form button span:nth-child(2),
+.edit-button button span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -278,7 +290,8 @@
 }
 
 .add-employee-button span:nth-child(3),
-.employee-form button span:nth-child(3) {
+.employee-form button span:nth-child(3),
+.edit-button button span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -299,7 +312,8 @@
 }
 
 .add-employee-button span:nth-child(4),
-.employee-form button span:nth-child(4) {
+.employee-form button span:nth-child(4),
+.edit-button button span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
@@ -478,6 +492,7 @@ textarea {
 }
 
 .edit-button {
+  border-radius: 5px;
   background-color: #000000;
   border: #f05237 solid 1px;
   position: relative;
@@ -494,18 +509,18 @@ textarea {
   box-shadow: 6px 5px 20px 7px rgba(0, 0, 0, 0.25);
 }
 
-.edit-button:hover {
+/* .edit-button:hover {
   background: #f9a54b;
   color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 5px #f05237, 0 0 25px #f05237, 0 0 50px #f05237, 0 0 100px #f05237;
-}
+} */
 
 /* Misc Buttons */
 
 .home-button,
 .close-button {
-  border: #032032 1px;
+  /* border: #032032 solid 3px; */
   color: #10ece5;
   transition: 0.5s;
 }

@@ -6,6 +6,9 @@ import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {Container, Col, Row} from 'react-bootstrap'
 
+// TODO: Media breakpoints for fonts, responsive header, last name resizing 
+// FIXME: Edit classname acting strange, added addButton, Need to fix
+
 
 export default function ProfilePage(props:any): JSX.Element {
     const dispatch = useDispatch()
@@ -16,6 +19,9 @@ export default function ProfilePage(props:any): JSX.Element {
         dispatch(getById(id))
       
     },[dispatch, id])
+
+
+    
 
     return (
         
@@ -38,7 +44,8 @@ export default function ProfilePage(props:any): JSX.Element {
                 <Col xs={4} className="left-side">
                     <p><img src={`${currentEmployee.photo}`} alt={currentEmployee.first_name}/></p>
                     <h4>{currentEmployee.first_name} {currentEmployee.last_name}</h4>
-                    <Link to="/update-employee"><button className="edit-button">Edit Profile</button></Link>
+    {/* FIXME: Buttons not right(naming) */}
+                    <div><Link to="/update-employee"><button className="add-employee-button edit-button"><span></span><span></span><span></span><span></span>Edit Profile</button></Link></div>
                     
                 </Col>
 
