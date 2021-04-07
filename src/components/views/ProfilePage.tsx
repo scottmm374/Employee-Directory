@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux"
 import {Link} from 'react-router-dom'
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {Container, Col, Row} from 'react-bootstrap'
 
 
 export default function ProfilePage(props:any): JSX.Element {
@@ -17,25 +18,35 @@ export default function ProfilePage(props:any): JSX.Element {
     },[dispatch, id])
 
     return (
-        <div className="profile-page">
-            <div className="header-profile">
+        
+        <Container fluid className='profile-page'>
+        
+           
+            <Row className="header">
+            
+                <Col xs={8}>
                 <h1>{currentEmployee.first_name}</h1>
+                </Col>
+                <Col xs={4}>
                 <Link to="/"><FontAwesomeIcon icon={faHome} className="home-button" size="3x"/></Link>
-            </div>
-                
-            <div className="main-content">
-                <div className="left-side">
+                </Col> 
+               
+            </Row>
+            
+        
+            <Row className="main-content">
+                <Col xs={4} className="left-side">
                     <p><img src={`${currentEmployee.photo}`} alt={currentEmployee.first_name}/></p>
                     <h4>{currentEmployee.first_name} {currentEmployee.last_name}</h4>
                     <Link to="/update-employee"><button className="edit-button">Edit Profile</button></Link>
                     
-                </div>
+                </Col>
 
-                <div className="sideways-profile-name">
+                <Col  xs={1} className="sideways-profile-name">
                     <h2>{currentEmployee.last_name}</h2>
-                </div>
+                </Col>
 
-                <div className="right-side">
+                <Col xs={6} className="right-side">
                     <div className="information">
                         <div><h4>Phone: </h4>{currentEmployee.phone}</div>
                         <div><h4>Email: </h4>{currentEmployee.email}</div>
@@ -46,10 +57,11 @@ export default function ProfilePage(props:any): JSX.Element {
                     </div>
                         
                     <div className="notes"><h4>Notes</h4><br/><br/>{currentEmployee.notes}</div>
-                </div>
+                </Col>
 
-            </div>
+            </Row>
             
-        </div>
+        </Container>
+      
     )
 }
