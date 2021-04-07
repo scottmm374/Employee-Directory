@@ -6,9 +6,9 @@ import {Container, CardColumns, Col} from 'react-bootstrap'
 const  EmployeeDashboard = () =>{
     return (
         <>
-        <div>
+        {/* <div> */}
         <Header />
-        </div>
+        {/* </div> */}
 
        
         <Container fluid className='dashboard'>

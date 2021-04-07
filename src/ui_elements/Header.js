@@ -1,15 +1,15 @@
 import {Link} from 'react-router-dom'
 import rosie from '../assets/rosie.svg'
-import { Jumbotron, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 
  const Header = () => {
      return(
-         <Jumbotron fluid className='header'>
+         <Container fluid className='header'>
              <Row>
                  <Col >
                  <img src={rosie} alt="rosie"/>
                  </Col>
-                <Col >
+                <Col xs={6}>
                 <h1 className="main-title">Team Directory</h1>
                 </Col>
                 <Col >
@@ -19,7 +19,7 @@ import { Jumbotron, Row, Col } from 'react-bootstrap'
              
              
              
-         </Jumbotron>
+         </Container>
      )
 }
 
