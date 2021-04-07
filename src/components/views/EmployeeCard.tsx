@@ -23,15 +23,16 @@ export default function EmployeeCard(): JSX.Element {
         <CardColumns className='card-container'>
        
          {employees.map(employee => (
-              <Link to={`/employee/${employee.id}`}>
+            //   <Link to={`/employee/${employee.id}`}>
                     <Card  style={{width: "15rem", marginTop: "50px"}} className='card-main' key={employee.id}>
                         <Card.Body>
-
+                        <Link to={`/employee/${employee.id}`}>
                         <div className='top-card-section'>
                        <Card.Img style={{width: "160px"}} className="card-img" src={`${employee.photo}`} alt={employee.first_name}/>
                         {/* <div className="name-card"> */}
                             <Card.Subtitle className="name-card"><p>{employee.first_name}</p> <p>{employee.last_name}</p></Card.Subtitle> 
                             </div>  
+                            </Link>
                        <Card.Text  className="card-icons-container">
 
                       
@@ -46,7 +47,7 @@ export default function EmployeeCard(): JSX.Element {
                         
                         
                     </Card>
-                    </Link>
+                    // </Link>
                 ))}
                 
         </CardColumns>

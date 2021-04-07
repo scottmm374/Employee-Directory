@@ -91,17 +91,17 @@
   height: 315px; 
    padding: 1rem;
  border-bottom: 2px solid #10ece5;
- border-left: 2px solid #10ece580;
- border-right: 2px solid #10ece580;
+ border-left: 1.5px solid #10ece5bb;
+ border-right: 1.5px solid #10ece580;
+ border-top: 1px solid #10ece554;
   box-shadow: 9px 13px 9px rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
+  border-radius: 20px;
 }
+
 .card-main:hover {
-  /* background: #f9a54b; */
-  /* color: #fff; */
-  border-radius: 5px;
-  box-shadow: 0 0 5px #f9a54b, 0 0 25px #f9a54b, 0 0 50px #f9a54b, 0 0 100px #f9a54b;
-  transform:scale(1.05)
+  
+  box-shadow: 0 0 45px #f9a54b59, 0 0 45px #10ece55d, 0 0 45px #f9a54b59, 0 0 45px #10ece55d;
+  /* transform:scale(1.02) */
 
 }
 
@@ -119,10 +119,15 @@
   border: 1px solid #10ece5;
   /* border-top:.5px solid #10ece58a; */
   box-shadow: 9px 13px 9px rgba(0, 0, 0, 0.4);
+  
 }
 
 .card-icons-circle:hover {
-  box-shadow: 0 0 5px #10ece5, 0 0 25px #10ece5, 0 0 50px #10ece5, 0 0 100px #10ece5;
+  background-color: rgba(0, 0, 0, 0.479);
+  border: 2px solid #10ece5;
+  transform:translateY(10px);
+ 
+  /* box-shadow: 0 0 5px #10ece55e, 0 0 5px #10ece55e, 0 0 25px #10ece55e, 0 0 5px #10ece55e; */
 }
 
 .card-img {
