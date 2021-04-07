@@ -24,13 +24,13 @@ export default function EmployeeCard(): JSX.Element {
        
          {employees.map(employee => (
               <Link to={`/employee/${employee.id}`}>
-                    <Card  style={{width: "15rem"}} className='card-main' key={employee.id}>
+                    <Card  style={{width: "15rem", marginTop: "50px"}} className='card-main' key={employee.id}>
                         <Card.Body>
 
                         <div className='top-card-section'>
                        <Card.Img style={{width: "160px"}} className="card-img" src={`${employee.photo}`} alt={employee.first_name}/>
                         {/* <div className="name-card"> */}
-                            <Card.Subtitle className="first-name-card">{employee.first_name} {employee.last_name}</Card.Subtitle> 
+                            <Card.Subtitle className="name-card"><p>{employee.first_name}</p> <p>{employee.last_name}</p></Card.Subtitle> 
                             </div>  
                        <Card.Text  className="card-icons-container">
 
