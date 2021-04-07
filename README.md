@@ -1,7 +1,11 @@
 # Rivet Challenge
     Developed by Michelle Scott
 
-![Rosie](/src/assets/rosie.svg)
+<!-- ![<img src="/src/assets/rosie.svg." width="150" height="80"/>](/src/assets/rosie.svg) -->
+
+![<img src="/src/assets/header.png" width="250"/>](/src/assets/header.png)
+![<img src="/src/assets/dash.png" width="250"/>](/src/assets/dash.png)
+![<img src="/src/assets/profile.png" width="250"/>](/src/assets/profile.png)
 
 ## Instructions to clone repo
     - Clone repo
@@ -9,19 +13,20 @@
     - Npm install for dependancies
 
 ## Instructions to run project locally
-    - run Npm start
+    - run npm start
 
 ### Tech 
 
-- React
+- React (CRA)
 - Typescript
-- Redux
+- Redux Toolkit
 - React Hook Form, for error checking and validation
 
-### Styling (No styling libraries used)
+### Styling 
 
 - CSS 
 - Font Awesome
+- React-Bootstrap
 
 Requirements
 
@@ -38,7 +43,7 @@ Rivet has developed a RESTful API for it's employee directory. You will create a
 ### Would like to add TECH:
 - [x] Redux *Toolkit*
 - [x] More Typescript checking
-- [ ] Styling Library (Reactstrap-boostrap, MaterialUI)
+- [x] Styling Library (Reactstrap-boostrap, MaterialUI)
 - [ ] Testing (Jest)
 
 -----------

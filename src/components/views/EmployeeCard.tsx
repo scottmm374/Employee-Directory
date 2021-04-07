@@ -1,9 +1,10 @@
 import {useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import { employeesSelector, getAllEmployees } from "../../redux/employeesSlice"
-import { useSelector, useDispatch } from "react-redux"
+import { useSelector, useDispatch, createDispatchHook } from "react-redux"
 import { faPhoneAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {Card, CardColumns} from 'react-bootstrap'
 
 export default function EmployeeCard(): JSX.Element {
     const dispatch = useDispatch()
@@ -18,22 +19,38 @@ export default function EmployeeCard(): JSX.Element {
     
 
     return (
-       <>
-        <div className='card-container'>
-        
+      <>
+        <CardColumns className='card-container'>
+       
          {employees.map(employee => (
-                    <div className='card' key={employee.id}>
+            //   <Link to={`/employee/${employee.id}`}>
+                    <Card  style={{width: "15rem", marginTop: "50px"}} className='card-main' key={employee.id}>
+                        <Card.Body>
+                        <Link to={`/employee/${employee.id}`}>
                         <div className='top-card-section'>
-                        <div><img className="card-img" src={`${employee.photo}`} alt={employee.first_name}/></div>
-                        <div className="name-card"><h4 className="first-name-card">{employee.first_name}</h4> <h4 className="last-name-card">{employee.last_name}</h4> </div>
+                       <Card.Img style={{width: "160px"}} className="card-img" src={`${employee.photo}`} alt={employee.first_name}/>
+                        {/* <div className="name-card"> */}
+                            <Card.Subtitle className="name-card"><p>{employee.first_name}</p> <p>{employee.last_name}</p></Card.Subtitle> 
+                            </div>  
+                            </Link>
+                       <Card.Text  className="card-icons-container">
+
+                      
+                        {/* <div className='icons-card'> */}
+                         <p className="card-icons-circle" ><FontAwesomeIcon icon={faPhoneAlt} /></p>
+                        <p className="card-icons-circle"><FontAwesomeIcon icon={faEnvelope} /></p>
                        
-                        <div className='icons-card'><div className="card-icons" ><FontAwesomeIcon icon={faPhoneAlt} /></div><div className="card-icons"><FontAwesomeIcon icon={faEnvelope} /></div></div>
-                        </div>
-                        <Link to={`/employee/${employee.id}`}><button className="view-profile-button">View</button></Link>
+                        </Card.Text>
+                        {/* <Link to={`/employee/${employee.id}`}><button className="view-profile-button">View</button></Link> */}
+            
+                        </Card.Body>
                         
-                    </div>
+                        
+                    </Card>
+                    // </Link>
                 ))}
-        </div>
+                
+        </CardColumns>
        </>
     )
 }

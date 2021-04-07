@@ -4,7 +4,7 @@
 */
 
 html,
-body,
+ body,
 div,
 span,
 applet,
@@ -90,8 +90,8 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
+} */
+HTML5 display-role reset for older browsers
 article,
 aside,
 details,
@@ -107,8 +107,10 @@ section {
 }
 body {
   line-height: 1;
-  /* background: #021b2b; */
   background-color: black;
+} 
+a {
+  text-decoration: none;
 }
 ol,
 ul {
