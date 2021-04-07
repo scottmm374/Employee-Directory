@@ -72,7 +72,9 @@
 
 
 .dashboard {
-  /* display: flex; */
+  padding: 5%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .card-main {
@@ -81,9 +83,6 @@
   cursor: pointer;
   height: 315px; 
    padding: 1rem;
-   /* margin-bottom: 10px; */
-  /* margin: 2rem auto; */
-  /* width: 20%; */
  border-bottom: 2px solid #10ece5;
  border-left: 2px solid #10ece580;
  border-right: 2px solid #10ece580;

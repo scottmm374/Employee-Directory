@@ -11,14 +11,14 @@ const  EmployeeDashboard = () =>{
         </div>
 
        
-        <Container className='dashboard'>
-            <Col   className="sideways-title"><h2>Rivet</h2></Col>
+        <Container fluid className='dashboard'>
+            <Col  xs={1} className="sideways-title"><h2>Rivet</h2></Col>
            
-                <div >
+                <Col>
                     
                 <EmployeeCard/>
 
-                </div>
+                </Col>
                
 
                
