@@ -1,15 +1,35 @@
 import EmployeeCard from './EmployeeCard'
 import Header from '../../ui_elements/Header'
+import {Container, CardColumns, Col} from 'react-bootstrap'
 
 
 const  EmployeeDashboard = () =>{
     return (
         <>
-         <Header />
-         <div className='dashboard'>
-         <div className="sideways-title"><h2>Rivet</h2></div>
-        <EmployeeCard />
+        <div>
+        <Header />
         </div>
+
+       
+        <Container className='dashboard'>
+            <Col   className="sideways-title"><h2>Rivet</h2></Col>
+           
+                <div >
+                    
+                <EmployeeCard/>
+
+                </div>
+               
+
+               
+
+
+            </Container>
+            
+            {/* </Col> */}
+            {/* </div> */}
+       
+       
         </>
     )
 }

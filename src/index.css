@@ -3,8 +3,8 @@
    License: none (public domain)
 */
 
-html,
-body,
+/* html, */
+/* body,
 div,
 span,
 applet,
@@ -90,10 +90,10 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-}
+} */
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
+/* article, */
+/* aside,
 details,
 figcaption,
 figure,
@@ -107,7 +107,6 @@ section {
 }
 body {
   line-height: 1;
-  /* background: #021b2b; */
   background-color: black;
 }
 ol,
@@ -128,4 +127,4 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
+} */
