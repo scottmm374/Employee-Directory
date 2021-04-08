@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import { update, getById, currentEmployeeSelector} from '../../redux/currentEmployeeSlice'
+import { update, currentEmployeeSelector} from '../../redux/currentEmployeeSlice'
 import {useHistory} from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux';
 import {Link} from 'react-router-dom'
@@ -23,9 +23,7 @@ interface Inputs {
 }
 
 
-// can prob simplify this to arrow func
 export default function UpdateEmployee(props: any): JSX.Element{
-    // const {id} = props.match.params  ! Dont think I need this but need to double check
 
     const {currentEmployee} = useSelector(currentEmployeeSelector)
     const dispatch = useDispatch()

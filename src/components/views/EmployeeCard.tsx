@@ -1,7 +1,7 @@
 import {useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import { employeesSelector, getAllEmployees } from "../../redux/employeesSlice"
-import { useSelector, useDispatch, createDispatchHook } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 import { faPhoneAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {Card, CardColumns} from 'react-bootstrap'
@@ -15,7 +15,7 @@ export default function EmployeeCard(): JSX.Element {
         dispatch(getAllEmployees())
        
     }, [dispatch])
-    // Temp fix for photos with nonesence strings. 
+    // TODO: Temp fix for photos with nonsence strings. 
     let filtered = employees.filter(people => people.photo.length > 30)
     console.log(filtered, "filtered")
 

@@ -107,7 +107,7 @@ section {
 }
 body {
   line-height: 1;
-  background-color: black;
+  /* background-color: black; */
 } 
 a {
   text-decoration: none;
