@@ -15,39 +15,30 @@ export default function EmployeeCard(): JSX.Element {
         dispatch(getAllEmployees())
        
     }, [dispatch])
-    
-    
+    // Temp fix for photos with nonesence strings. 
+    let filtered = employees.filter(people => people.photo.length > 30)
+    console.log(filtered, "filtered")
 
     return (
       <>
         <CardColumns className='card-container'>
        
-         {employees.map(employee => (
-            //   <Link to={`/employee/${employee.id}`}>
+         {filtered.map(employee => (
+             
                     <Card  style={{width: "15rem", marginTop: "50px"}} className='card-main' key={employee.id}>
                         <Card.Body>
                         <Link to={`/employee/${employee.id}`}>
                         <div className='top-card-section'>
                        <Card.Img style={{width: "160px"}} className="card-img" src={`${employee.photo}`} alt={employee.first_name}/>
-                        {/* <div className="name-card"> */}
                             <Card.Subtitle className="name-card"><p>{employee.first_name}</p> <p>{employee.last_name}</p></Card.Subtitle> 
                             </div>  
                             </Link>
                        <Card.Text  className="card-icons-container">
-
-                      
-                        {/* <div className='icons-card'> */}
                          <p className="card-icons-circle" ><FontAwesomeIcon icon={faPhoneAlt} /></p>
                         <p className="card-icons-circle"><FontAwesomeIcon icon={faEnvelope} /></p>
-                       
                         </Card.Text>
-                        {/* <Link to={`/employee/${employee.id}`}><button className="view-profile-button">View</button></Link> */}
-            
                         </Card.Body>
-                        
-                        
                     </Card>
-                    // </Link>
                 ))}
                 
         </CardColumns>

@@ -31,6 +31,7 @@ export interface EmployeesState {
             state.isLoading = payload
         },
         setEmployees: (state, { payload }: PayloadAction<[]>) => {
+
             state.employees = payload
             
         },
@@ -66,7 +67,9 @@ export const getAllEmployees = (): AppThunk => {
                 'token': 'XA8K6b8GSM5mGNN2v5Q3j6xUUwpkoPSx3zdxbAADwtzuHrexRHWi58rHZkRZJhf7'
             }
         }).then(res => {
-          dispatch(setEmployees(res.data))
+          console.log(res.data)
+          const filteredRes = res.data.filter(people => people.photo !== null )
+          dispatch(setEmployees(filteredRes))
           
         }).then(() => {
             dispatch(setLoading(false))
