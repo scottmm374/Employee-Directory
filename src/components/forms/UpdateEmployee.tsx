@@ -52,7 +52,7 @@ export default function UpdateEmployee(props: any): JSX.Element{
 
     return (
         <div className="form-container">
-            <div className='employee-form'>
+            <div className='form'>
                 <div className="form-header">
                     <h2>Update Employee</h2>
             <div><Link to={`/employee/${currentEmployee.id}`}><FontAwesomeIcon icon={faTimesCircle} className="close-button" size="3x"/></Link></div>

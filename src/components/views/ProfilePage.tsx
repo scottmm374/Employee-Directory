@@ -45,7 +45,7 @@ export default function ProfilePage(props:any): JSX.Element {
                     <p><img src={`${currentEmployee.photo}`} alt={currentEmployee.first_name}/></p>
                     <h4>{currentEmployee.first_name} {currentEmployee.last_name}</h4>
     {/* FIXME: Buttons not right(naming) */}
-                    <div><Link to="/update-employee"><button className="add-employee-button edit-button"><span></span><span></span><span></span><span></span>Edit Profile</button></Link></div>
+                    <div><Link to="/update-employee"><button className="edit-button"><span></span><span></span><span></span><span></span>Edit Profile</button></Link></div>
                     
                 </Col>
 
@@ -54,14 +54,14 @@ export default function ProfilePage(props:any): JSX.Element {
                 </Col>
 
                 <Col xs={6} className="right-side">
-                    <div className="information">
-                        <div><h4>Phone: </h4>{currentEmployee.phone}</div>
-                        <div><h4>Email: </h4>{currentEmployee.email}</div>
-                        <div><h4>Street Address: </h4>{currentEmployee.address}</div>
-                        <div><h4>City :</h4>{currentEmployee.city}</div> 
-                        <div><h4>State:</h4>{currentEmployee.state}</div>
-                        <div><h4>Zip Code:</h4>{currentEmployee.zip}</div>
-                    </div>
+                    <Container fluid className="information">
+                        <Row><Col lg={true}><h4>Phone:</h4></Col><Col lg={true}><p>{currentEmployee.phone}</p></Col></Row>
+                        <Row><Col lg={true}><h4>Email: </h4></Col><Col lg={true}><p>{currentEmployee.email}</p></Col></Row>
+                        <Row><Col lg={true}><h4>Street Address: </h4></Col><Col lg={true}><p>{currentEmployee.address}</p></Col></Row>
+                        <Row><Col lg={true}><h4>City :</h4></Col><Col lg={true}><p>{currentEmployee.city}</p></Col></Row> 
+                        <Row><Col lg={true}><h4>State:</h4></Col><Col lg={true}><p>{currentEmployee.state}</p></Col></Row>
+                        <Row><Col lg={true}><h4>Zip Code:</h4></Col><Col lg={true}><p>{currentEmployee.zip}</p></Col></Row>
+                    </Container>
                         
                     <div className="notes"><h4>Notes</h4><br/><br/>{currentEmployee.notes}</div>
                 </Col>
