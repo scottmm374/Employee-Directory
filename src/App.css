@@ -189,9 +189,10 @@ justify-content: center;
 }
 
 label{
-  padding: 10px 0;
+  /* padding: 10px 0; */
   font-size: 16px;
   color:whitesmoke;
+ 
   
 }
 
@@ -206,6 +207,7 @@ label{
   color: white;
   margin-bottom: 30px;
   border: none;
+  height: 30px;
   /* border: 2px dashed #03e9f4; */
   /* outline: none; */
   background: #03e8f456;
@@ -418,15 +420,15 @@ textarea {
   /* justify-content: center; */
 }
 
-.left-side {
+/* .left-side {
   
   background-color: #000000;
   border-radius: 15px;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6); */
   /* display: block; */
   /* padding: 2rem; */
   /* width: 40%; */
-}
+/* } */
 
 .left-side img {
   margin-top: 60px;
