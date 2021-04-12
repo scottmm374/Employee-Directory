@@ -7,13 +7,13 @@ import { Container, Row, Col } from 'react-bootstrap'
      return(
          <Container fluid className='header'>
              <Row>
-                 <Col >
+                 <Col lg={true} >
                  <img src={rosie} alt="rosie"/>
                  </Col>
-                <Col xs={6}>
+                <Col  lg={true}>
                 <h1 className="main-title">Team Directory</h1>
                 </Col>
-                <Col >
+                <Col lg={true}>
                
                 <div className="add-employee-container"><Link to='/add-employee'><button className="add-employee-button"><span></span><span></span><span></span><span></span>Add New Employee</button></Link></div>
                 </Col>

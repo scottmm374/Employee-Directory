@@ -61,7 +61,7 @@ export default function AddEmployee(props: any): JSX.Element{
                 <form onSubmit={handleSubmit(onSubmit)}>
 
                     <Row className="basic-info">
-                        <Col className= "form-input error">
+                        <Col lg={true} className= "form-input error">
                         <label>First Name</label>
                         <input
                         className= "form-input error"
@@ -73,7 +73,7 @@ export default function AddEmployee(props: any): JSX.Element{
                         {errors.first_name && errors.first_name.type === "required" && (<div className="error">You must enter your First name.</div>)}
                         </Col>
 
-                    <Col className= "form-input error">
+                    <Col lg={true} className= "form-input error">
                     <label>Last Name</label>
                         <input 
                         ref={register({required: true})} 
@@ -84,7 +84,7 @@ export default function AddEmployee(props: any): JSX.Element{
                         {errors.last_name && errors.last_name.type === "required" && (<div className="error">You must enter your Last name.</div>)}
                     </Col>
                   
-                    <Col className= "form-input error">
+                    <Col lg={true} className= "form-input error">
                         <label>Phone Number</label>
                         <input
                         ref={register({required: true})} 
@@ -96,7 +96,7 @@ export default function AddEmployee(props: any): JSX.Element{
                         {errors.phone && errors.phone.type === "required" && (<div className="error">You must enter Phone number.</div>)}
                     </Col>
 
-                    <Col className= "form-input error">
+                    <Col lg={true}  className= "form-input error">
                         <label>Email</label>
                         <input
                         ref={register({required: true})}
@@ -110,7 +110,7 @@ export default function AddEmployee(props: any): JSX.Element{
                     </Row>
 
                     <Row className="address">
-                    <Col className= "form-input error">
+                    <Col lg={true} className= "form-input error">
                         <label>Street Address</label>
                         <input
                         ref={register({required: true})}
@@ -125,7 +125,7 @@ export default function AddEmployee(props: any): JSX.Element{
 
                    
                     
-                    <Col className= "form-input error">
+                    <Col lg={true} className= "form-input error">
                     <label>City</label>
                         <input
                         ref={register({required: true})}
@@ -137,7 +137,7 @@ export default function AddEmployee(props: any): JSX.Element{
                         {errors.city && errors.city.type === "required" && (<div className="error">You must enter your City.</div>)}
                     </Col>
 
-                    <Col className= "form-input error">
+                    <Col lg={true}  className= "form-input error">
                     <label>State</label>
                         <input
                         ref={register({required: true})}
@@ -149,7 +149,7 @@ export default function AddEmployee(props: any): JSX.Element{
                         {errors.state && errors.state.type === "required" && (<div className="error">You must enter your State.</div>)}
                     </Col>
 
-                    <Col className= "form-input error">
+                    <Col lg={true} className= "form-input error">
                         <label>Zip Code</label>
                         <input
                         ref={register({required: true})}
@@ -162,7 +162,7 @@ export default function AddEmployee(props: any): JSX.Element{
                     </Col>
                    </Row>
                    <Row className="optional-info">
-                    <Col className= "form-input error">
+                    <Col lg={true} className= "form-input error">
                     <label>Link to Profile Picture</label>
                         <input
                         ref={register}
@@ -173,7 +173,7 @@ export default function AddEmployee(props: any): JSX.Element{
                     </Col>
                     </Row>
                     <Row>
-                    <Col  className= "form-input text-area error">
+                    <Col lg={true} className= "form-input text-area error">
                         <textarea
                         ref={register}
                         name='notes'

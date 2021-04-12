@@ -36,15 +36,17 @@
   align-items: center;
   padding: 2rem;
   border-bottom: 15px groove #f8ab48;
+  
 }
 
 .header h1 {
   padding-top: 4%;
   font-family: "roboto";
   font-weight: 300;
-  font-size: 6rem;
+  font-size: 4rem;
   letter-spacing: 0.09em;
   color: #f8ab48;
+  
 }
 
 .header button {
@@ -116,7 +118,6 @@ placeholder {
   border: 2px solid #10ece5;
   transform:translateY(10px);
  
-  /* box-shadow: 0 0 5px #10ece55e, 0 0 5px #10ece55e, 0 0 25px #10ece55e, 0 0 5px #10ece55e; */
 }
 
 .card-img {
@@ -127,30 +128,7 @@ placeholder {
   min-height: 160px;
 }
 
-/* .card button {
-  background-color: #0f1724;
-  border: #10ece5 3px;
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  color: #10ece5;
-  font-size: 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: 0.5s;
-  margin-top: 40px;
-  letter-spacing: 4px;
-  border-radius: 5px;
-  box-shadow: 0px 4px 3px 2px rgba(0, 0, 0, 0.25), -2px -4px 3px -2px #10ece528;
-}
 
-.card button:hover {
-  background: #f9a54b;
-  color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #f05237, 0 0 25px #f05237, 0 0 50px #f05237, 0 0 100px #f05237;
-} */
 .name-card {
    display: flex;
    flex-direction:column;
@@ -159,10 +137,9 @@ placeholder {
   font-family: "roboto";
   font-weight: 300;
   color: #f8ab48; 
-  /* margin-bottom: 20px; */
 }
 
-/* FORMS */
+/* * FORMS */
 
 .form-container {
   
@@ -182,11 +159,9 @@ justify-content: center;
 }
 .employee-form {
   width: 60%;
-  
   margin-top: 150px;
   margin-bottom: 150px;
   padding: 40px;
-  /* background: #032032; */
   background: black;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
@@ -209,7 +184,6 @@ label{
   margin-bottom: 30px;
   border: none;
   height: 30px;
-  /* outline: none; */
   background: #03e8f456;
   padding-left: 10px;
 }
@@ -356,9 +330,7 @@ textarea {
   justify-content: space-around; 
   border-bottom: 15px groove #f8ac48;
 }
-/* .svg-inline--fa {
-  vertical-align: -1.125em;
-} */
+
 
 .header-profile h1 {
   font-family: "roboto";
@@ -369,7 +341,6 @@ textarea {
   color: #f05237;
   text-align: start;
   margin-left: 263px;
-  /* text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25); */
   text-shadow: 0px 10px 6px rgba(0, 0, 0, 0.801); 
 }
 
@@ -383,7 +354,6 @@ textarea {
   text-align: start;
   letter-spacing: 0.69em;
   color: #f8ab48;
-  /* text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25); */
   text-shadow: 0px 10px 6px rgba(0, 0, 0, 0.801);
 }
 
@@ -396,12 +366,9 @@ textarea {
   
 }
 
-/* .main-content .left-side .col-4 {
-  text-align:left;
-} */
+
 
 .left-side img {
-  /* margin-top: 60px; */
   max-width: 60%;
   border-radius: 20px;
   border: 5px ridge #f05237;
@@ -494,7 +461,6 @@ textarea {
 
 .home-button,
 .close-button {
-  /* border: #032032 solid 3px; */
   color: #10ece5;
   transition: 0.5s;
 }
