@@ -29,7 +29,7 @@ export default function ProfilePage(props:any): JSX.Element {
         <Container fluid className='profile-page'>
         
            
-            <Row className="header-profile">
+            <Row className="profile-header">
             
                 <Col xs={8}>
                 <h1>{currentEmployee.first_name}</h1>

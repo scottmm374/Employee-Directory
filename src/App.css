@@ -49,8 +49,6 @@
   
 }
 
-
-
 .header img {
   width: 30%;
 }
@@ -450,7 +448,7 @@ textarea {
 /* ! MEDIA QUERIES */
 
 @media (max-width:1400px){
-  .header h1 {
+  .header .main-title {
     /* padding-top: 18%; */
     font-family: "roboto";
     font-weight: 300;
@@ -463,21 +461,44 @@ textarea {
 }
 
 @media (max-width:1080px){
-  .header-profile h1 {
-    font-family: "roboto";
-    font-weight: 100;
-    font-size: 3em;
-    text-transform: uppercase;
-    letter-spacing: .39em;
-    color: #f05237;
-    text-align: start;
-    margin-left: 22%;
-    text-shadow: 0px 10px 6px rgba(0, 0, 0, 0.801); 
+  .header {
+    padding-top: 6%;
+    padding-bottom: 2%;
   }
+
+  .header img {
+    padding-top: 8%;
+    width:40%;
+    
+  }
+  .header .add-employee {
+    padding: 12%;
+    font-size: .75em;
+  
+  }
+  .header .main-title {
+    padding-top: 10%;
+    font-size: 3em;
+    letter-spacing: 0.09em;
+    color: #f8ab48;
+  }
+
+  .profile-header h1 {
+    font-size: 3em;
+    letter-spacing: .39em;
+    margin-left: 22%;
+  }
+
+  .card-container {
+    justify-content: space-evenly;
+  }
+
+  
   
 }
 
 @media (max-width:825px){
+  
   
 }
 
