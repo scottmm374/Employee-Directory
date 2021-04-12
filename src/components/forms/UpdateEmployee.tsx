@@ -92,7 +92,6 @@ export default function UpdateEmployee(props: any): JSX.Element{
                         type='text'
                         name='phone'
                         value={updateEmployee.phone}
-                        // placeholder="Phone Number"
                         onChange={handleChange} />
                         {errors.phone && errors.phone.type === "required" && (<div className="error">You must enter Phone number.</div>)}
                     </Col>
@@ -104,7 +103,6 @@ export default function UpdateEmployee(props: any): JSX.Element{
                         type='text'
                         name='email'
                         value={updateEmployee.email}
-                        // placeholder="Email"
                         onChange={handleChange} />
                         {errors.email && errors.email.type === "required" && (<div className="error">You must enter your Email.</div>)}
                     </Col>
@@ -118,7 +116,6 @@ export default function UpdateEmployee(props: any): JSX.Element{
                         type='text'
                         name='address'
                         value={updateEmployee.address}
-                        // placeholder="Address"
                         onChange={handleChange} />
                         {errors.address && errors.address.type === "required" && (<div className="error">You must enter your Street Address.</div>)}
                     </Col>
@@ -133,7 +130,6 @@ export default function UpdateEmployee(props: any): JSX.Element{
                         type='text'
                         name='city'
                         value={updateEmployee.city}
-                        // placeholder="City"
                         onChange={handleChange} />
                         {errors.city && errors.city.type === "required" && (<div className="error">You must enter your City.</div>)}
                     </Col>
@@ -145,7 +141,6 @@ export default function UpdateEmployee(props: any): JSX.Element{
                         type='text'
                         name='state'
                         value={updateEmployee.state}
-                        // placeholder="State"
                         onChange={handleChange} />
                         {errors.state && errors.state.type === "required" && (<div className="error">You must enter your State.</div>)}
                     </Col>
@@ -157,7 +152,6 @@ export default function UpdateEmployee(props: any): JSX.Element{
                         type='text'
                         name='zip'
                         value={updateEmployee.zip}
-                        // placeholder="Zip Code"
                         onChange={handleChange} />
                         {errors.zip && errors.zip.type === "required" && (<div className="error">You must enter your Zip Code.</div>)}
                     </Col>
