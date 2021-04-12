@@ -94,6 +94,10 @@ placeholder {
   box-shadow: 0 0 45px #f9a54b59, 0 0 45px #10ece55d, 0 0 45px #f9a54b59, 0 0 45px #10ece55d;
 }
 
+.card a:hover{
+  color:#f8ab48;
+}
+
 .card-icons-container {
   display: flex;
   justify-content: space-between;
@@ -326,6 +330,7 @@ textarea {
 }
 
 .sideways-profile-name {
+ 
   font-size: 5em;
   text-transform: uppercase;
   writing-mode: vertical-rl;
@@ -337,39 +342,47 @@ textarea {
   text-shadow: 0px 10px 6px rgba(0, 0, 0, 0.801);
 }
 
-.main-content {
+.profile-page .main-content {
+  border: 5 px solid red;
+
   margin-top: 10%;
   margin-left: 10%;
   margin-right: 7%;
   padding-bottom: 20%;
-  
 }
 
 
 
 .left-side img {
-  max-width: 75%;
+  
+  max-width: 80%;
   border-radius: 20px;
   border: 5px ridge #f05237;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
 }
 
 
-.left-side h4 {
+.left-side .first-name {
+  text-align:end;
   margin-top: 15%;
   text-transform: uppercase;
   font-weight: 200;
-  font-size: 1.25em;
+  font-size: 1.45em;
+  letter-spacing: 0.19em;
+  color: #f8ab48;
+  text-shadow: 0px 10px 6px rgba(0, 0, 0, 0.801);
+}
+.left-side .last-name {
+  text-align:start;
+  margin-top: 15%;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 1.45em;
   letter-spacing: 0.19em;
   color: #f8ab48;
   text-shadow: 0px 10px 6px rgba(0, 0, 0, 0.801);
 }
 
-/* .right-side {
-  display: flex;
-  flex-direction: column;
-  /* padding-right: 117px; */
-/* }  */
 
 .information {
   border-radius: 15px;
@@ -392,12 +405,14 @@ textarea {
 
 .information .row  p {
  text-align:end;
-  color: whitesmoke;
+  color: #f9a54b;
 }
 
 .notes {
+  width: 95%;
   border-radius: 15px;
   padding: 5%;
+  margin-left: 2%;
   background-color: rgb(0, 0, 0);
   margin-top: 5%;
   text-align: left;
@@ -406,13 +421,13 @@ textarea {
 }
 
 .notes h4 {
-  
+  color: #f05237;
   font-weight: 300;
   font-size: 1.5rem;
 }
 
 
-/* Misc Buttons */
+/* !  Buttons */
 
 .home-button,
 .close-button {
@@ -436,10 +451,10 @@ textarea {
 
 @media (max-width:1400px){
   .header h1 {
-    padding-top: 18%;
+    /* padding-top: 18%; */
     font-family: "roboto";
     font-weight: 300;
-    font-size: 3em;
+    font-size: 3.5em;
     letter-spacing: 0.09em;
     color: #f8ab48;
     
@@ -447,7 +462,18 @@ textarea {
 
 }
 
-@media (max-width:1280px){
+@media (max-width:1080px){
+  .header-profile h1 {
+    font-family: "roboto";
+    font-weight: 100;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: .39em;
+    color: #f05237;
+    text-align: start;
+    margin-left: 22%;
+    text-shadow: 0px 10px 6px rgba(0, 0, 0, 0.801); 
+  }
   
 }
 

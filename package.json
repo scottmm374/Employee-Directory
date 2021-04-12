@@ -61,7 +61,6 @@
     "@types/react-router-dom": "^5.1.7",
     "@types/redux-logger": "^3.0.8",
     "bootstrap": "^4.6.0",
-    "less": "^4.1.1",
     "react-bootstrap": "^1.5.2",
     "redux-devtools-extension": "^2.13.9"
   }
