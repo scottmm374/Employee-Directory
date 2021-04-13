@@ -9,7 +9,7 @@ const  EmployeeDashboard = () =>{
         <Header />
         <Container fluid className='dashboard'>
             <Col  xs={1} className="sideways-title"><h2>Rivet</h2></Col>
-                <Col>
+                <Col xs={true}>
                 <EmployeeCard/>
                 </Col>
             </Container>

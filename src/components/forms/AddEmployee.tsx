@@ -5,6 +5,7 @@ import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDispatch } from 'react-redux';
 import {addNewEmployee} from '../../redux/employeesSlice'
+import {Col, Row} from 'react-bootstrap'
 
 interface Inputs {
     first_name: string,
@@ -15,14 +16,15 @@ interface Inputs {
         city: string,
         state: string,
         zip: string,
-        photo: string,
-        notes: string,
+        photo?: string| null ,
+        notes?: string | null,
 }
 
 
 export default function AddEmployee(props: any): JSX.Element{
     const dispatch = useDispatch()
-    const {register, handleSubmit, errors} = useForm<Inputs>()
+  
+    const {register, handleSubmit,  errors } = useForm<Inputs>()
     const [newEmployee, setNewEmployee] = useState({
         first_name: "",
         last_name: "",
@@ -51,125 +53,142 @@ export default function AddEmployee(props: any): JSX.Element{
 
     return (
         <div className="form-container">
-            <div className='employee-form'>
+            <div className='form'>
                 <div className="form-header">
                     <h2>Add New Employee</h2>
                     <div><Link to="/"><FontAwesomeIcon icon={faTimesCircle} className="close-button" size="3x"/></Link></div>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <div className= "form-input">
+
+                    <Row className="basic-info">
+                        <Col lg={true} className= "form-input error">
+                        <label>First Name</label>
                         <input
+                        className= "form-input error"
                         ref={register({required: true})} 
                         type='text'
                         name='first_name'
                         value={newEmployee.first_name}
-                        placeholder="First Name"
                         onChange={handleChange} />
                         {errors.first_name && errors.first_name.type === "required" && (<div className="error">You must enter your First name.</div>)}
-                    </div>
+                        </Col>
 
-                    <div className= "form-input">
-                        <input
+                    <Col lg={true} className= "form-input error">
+                    <label>Last Name</label>
+                        <input 
                         ref={register({required: true})} 
                         type='text'
                         name='last_name'
                         value={newEmployee.last_name}
-                        placeholder="Last Name"
                         onChange={handleChange} />
                         {errors.last_name && errors.last_name.type === "required" && (<div className="error">You must enter your Last name.</div>)}
-                    </div>
-
-                    <div className= "form-input">
+                    </Col>
+                  
+                    <Col lg={true} className= "form-input error">
+                        <label>Phone Number</label>
                         <input
                         ref={register({required: true})} 
                         type='text'
                         name='phone'
                         value={newEmployee.phone}
-                        placeholder="Phone Number"
+                        // placeholder="Phone Number"
                         onChange={handleChange} />
                         {errors.phone && errors.phone.type === "required" && (<div className="error">You must enter Phone number.</div>)}
-                    </div>
+                    </Col>
 
-                    <div className= "form-input">
+                    <Col lg={true}  className= "form-input error">
+                        <label>Email</label>
                         <input
                         ref={register({required: true})}
                         type='text'
                         name='email'
                         value={newEmployee.email}
-                        placeholder="Email"
+                        // placeholder="Email"
                         onChange={handleChange} />
                         {errors.email && errors.email.type === "required" && (<div className="error">You must enter your Email.</div>)}
-                    </div>
+                    </Col>
+                    </Row>
 
-                    <div className= "form-input">
+                    <Row className="address">
+                    <Col lg={true} className= "form-input error">
+                        <label>Street Address</label>
                         <input
                         ref={register({required: true})}
                         type='text'
                         name='address'
                         value={newEmployee.address}
-                        placeholder="Address"
+                        // placeholder="Address"
                         onChange={handleChange} />
                         {errors.address && errors.address.type === "required" && (<div className="error">You must enter your Street Address.</div>)}
-                    </div>
+                    </Col>
+                   
 
-                    <div className= "form-input">
+                   
+                    
+                    <Col lg={true} className= "form-input error">
+                    <label>City</label>
                         <input
                         ref={register({required: true})}
                         type='text'
                         name='city'
                         value={newEmployee.city}
-                        placeholder="City"
+                        // placeholder="City"
                         onChange={handleChange} />
                         {errors.city && errors.city.type === "required" && (<div className="error">You must enter your City.</div>)}
-                    </div>
+                    </Col>
 
-                    <div className= "form-input">
+                    <Col lg={true}  className= "form-input error">
+                    <label>State</label>
                         <input
                         ref={register({required: true})}
                         type='text'
                         name='state'
                         value={newEmployee.state}
-                        placeholder="State"
+                        // placeholder="State"
                         onChange={handleChange} />
                         {errors.state && errors.state.type === "required" && (<div className="error">You must enter your State.</div>)}
-                    </div>
+                    </Col>
 
-                    <div className= "form-input">
+                    <Col lg={true} className= "form-input error">
+                        <label>Zip Code</label>
                         <input
                         ref={register({required: true})}
                         type='text'
                         name='zip'
                         value={newEmployee.zip}
-                        placeholder="Zip Code"
+                        // placeholder="Zip Code"
                         onChange={handleChange} />
                         {errors.zip && errors.zip.type === "required" && (<div className="error">You must enter your Zip Code.</div>)}
-                    </div>
-
-                    <div className= "form-input">
+                    </Col>
+                   </Row>
+                   <Row className="optional-info">
+                    <Col lg={true} className= "form-input error">
+                    <label>Link to Profile Picture</label>
                         <input
                         ref={register}
                         type='text'
                         name='photo'
                         value={newEmployee.photo}
-                        placeholder="Link to profile photo"
                         onChange={handleChange} />
-                    </div>
-
-                    <div className= "form-input text-area">
+                    </Col>
+                    </Row>
+                    <Row>
+                    <Col lg={true} className= "form-input text-area error">
                         <textarea
                         ref={register}
                         name='notes'
                         value={newEmployee.notes}
                         placeholder="Notes"
                         onChange={handleChange} />
-                    </div> 
+                    </Col> 
+                    </Row>
                     
                     <button>
                         <span></span>
                         <span></span>
                         <span></span>
                         <span></span>
-                        Add Employee
+                        Submit
                     </button>
                 </form>
 
@@ -177,3 +196,7 @@ export default function AddEmployee(props: any): JSX.Element{
     </div>
     )
 }
+
+
+
+

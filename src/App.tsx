@@ -6,7 +6,7 @@ import AddEmployee from './components/forms/AddEmployee'
 import UpdateEmployee from './components/forms/UpdateEmployee'
 import ProfilePage from './components/views/ProfilePage';
 
-function App(): JSX.Element {
+const App = (): JSX.Element => {
   return (
     <div className="App">
       <Switch>
