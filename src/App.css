@@ -309,13 +309,13 @@ textarea {
 
 
 
-.header-profile {
+.profile-header {
   padding-top: 5%;
   border-bottom: 15px groove #f8ac48;
 }
 
 
-.header-profile h1 {
+.profile-header h1 {
   font-family: "roboto";
   font-weight: 100;
   font-size: 4em;
@@ -342,7 +342,6 @@ textarea {
 
 .profile-page .main-content {
   border: 5 px solid red;
-
   margin-top: 10%;
   margin-left: 10%;
   margin-right: 7%;
@@ -350,17 +349,24 @@ textarea {
 }
 
 
-
 .left-side img {
-  
   max-width: 80%;
   border-radius: 20px;
   border: 5px ridge #f05237;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
 }
 
+.left-side .profile-full-name {
+ margin-top: 15%;
+ text-transform: uppercase;
+ font-weight: 200;
+ font-size: 1.45em;
+ color: #f8ab48;
+ text-shadow: 0px 10px 6px rgba(0, 0, 0, 0.801);
+ 
+}
 
-.left-side .first-name {
+/* .left-side .first-name {
   text-align:end;
   margin-top: 15%;
   text-transform: uppercase;
@@ -379,7 +385,7 @@ textarea {
   letter-spacing: 0.19em;
   color: #f8ab48;
   text-shadow: 0px 10px 6px rgba(0, 0, 0, 0.801);
-}
+} */
 
 
 .information {
@@ -489,20 +495,43 @@ textarea {
     margin-left: 22%;
   }
 
+  .sideways-profile-name {
+    display:none;
+  }
+
+  .home-button {
+    font-size: 2em;
+  }
+
+  .profile-page .left-side {
+    font-size: 1em;
+  }
+
+ 
   .card-container {
     justify-content: space-evenly;
+  }
+
+  .form .close-button {
+    font-size: 1.5em;
+  }
+
+  .form h2 {
+    font-size: 1.75em;
+    margin-left: 25%;
   }
 
   
   
 }
 
-@media (max-width:825px){
-  
-  
-}
 
-@media (max-width:375px){
+
+@media (max-width:425px){
+  .edit-button {
+    margin-bottom: 30px;
+
+  }
   
 }
 
